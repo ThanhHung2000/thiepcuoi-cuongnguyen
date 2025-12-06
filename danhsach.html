@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố Cục Sản Phẩm (Lọc theo Class)</title>
+    <link rel="stylesheet" href="danhsach.css">
+</head>
+<body onload="initFilter()">
+  <div>
+
+      <h2>iPhone 14 (Plus/Pro/Pro Max) giảm đến 3 triệu, có trả góp</h2>
+
+      <div class="filter-bar">
+          <a href="#" class="filter-btn active" id="btn_all" onclick="filterProducts('all')">TẤT CẢ</a>
+          <a href="#" class="filter-btn" id="btn_promaxcu" onclick="filterProducts('promaxcu')">IPHONE 14 PRO MAX CŨ</a>
+          <a href="#" class="filter-btn" id="btn_procu" onclick="filterProducts('procu')">IPHONE 14 PRO CŨ</a>
+          <a href="#" class="filter-btn" id="btn_pluscu" onclick="filterProducts('pluscu')">IPHONE 14 PLUS CŨ</a>
+          <a href="#" class="filter-btn" id="btn_14cu" onclick="filterProducts('14cu')">IPHONE 14 CŨ</a>
+      </div>
+
+      <hr>
+
+      <div class="product-grid">
+
+          <div class="product-group">
+              <div class="product-card promaxcu">
+                  <img src="https://clickbuy.com.vn/uploads/pro/iphone-14-pro-128gb-cu-dep-99html-6706-dfxa-1024x1024-183407.jpg" alt="iPhone 14 Pro Max 128GB">
+                  <h3>iPhone 14 Pro Max 128GB cũ</h3>
+                  <div class="rating">★★★★★ (94 đánh giá)</div>
+                  <div><p class="price-old">33.990.000₫</p><p class="price-new">15.990.000₫</p></div>
+              </div>
+              <div class="product-card promaxcu">
+                  <img src="https://clickbuy.com.vn/uploads/pro/iphone-14-pro-128gb-cu-dep-99html-6706-dfxa-1024x1024-183407.jpg" alt="iPhone 14 Pro Max 256GB">
+                  <h3>iPhone 14 Pro Max 256GB cũ</h3>
+                  <div class="hethang">Liên hệ lại sau</div>
+              </div>
+              <div class="product-card promaxcu">
+                  <img src="https://clickbuy.com.vn/uploads/pro/iphone-14-pro-128gb-cu-dep-99html-6706-dfxa-1024x1024-183407.jpg" alt="iPhone 14 Pro Max 512GB">
+                  <h3>iPhone 14 Pro Max 512GB cũ</h3>
+                  <div class="hethang">Liên hệ lại sau</div>
+              </div>
+              <div class="product-card promaxcu">
+                  <img src="https://clickbuy.com.vn/uploads/pro/iphone-14-pro-128gb-cu-dep-99html-6706-dfxa-1024x1024-183407.jpg" alt="iPhone 14 Pro Max 1TB">
+                  <h3>iPhone 14 Pro Max 1TB cũ</h3>
+                  <div class="hethang">Liên hệ lại sau</div>
+              </div>
+              <div class="product-card procu">
+                  <img src="https://clickbuy.com.vn/uploads/pro/iphone-14-pro-128gb-cu-dep-99html-6706-dfxa-1024x1024-183407.jpg" alt="iPhone 14 Pro">
+                  <h3>iPhone 14 Pro 128GB cũ đẹp 99%</h3>
+                  <div><p class="price-old">29.990.000₫</p><p class="price-new">13.990.000₫</p></div>
+              </div> 
+              <div class="product-card pluscu ">
+                  <img src="https://clickbuy.com.vn/uploads/pro/iphone-14-pro-128gb-cu-dep-99html-6706-dfxa-1024x1024-183407.jpg" alt="iPhone 14 Plus">
+                  <h3>iPhone 14 Plus 256GB cũ</h3>
+                  <div class="hethang">Liên hệ lại sau</div>
+              </div> 
+              <div class="product-card 14cu ">
+                  <img src="https://clickbuy.com.vn/uploads/pro/iphone-14-pro-128gb-cu-dep-99html-6706-dfxa-1024x1024-183407.jpg" alt="iPhone 14">
+                  <h3>iPhone 14 128GB cũ đẹp 99%</h3>
+                  <div class="hethang">Liên hệ lại sau</div>
+              </div> 
+          </div>
+      </div>
+  </div>
+
+  <script>
+      // Chỉ cần mảng các category chính, thêm 'all' cho nút điều khiển
+      var allButtons = ['promaxcu', 'procu', 'pluscu', '14cu', 'all']; 
+      
+      // Hàm chính để lọc, bây giờ sẽ lọc từng thẻ sản phẩm
+      function filterProducts(category) {
+          
+          // 1. Quản lý trạng thái Active của các nút
+          for (var i = 0; i < allButtons.length; i++) {
+              var buttonId = 'btn_' + allButtons[i];
+              var buttonElement = document.getElementById(buttonId);
+              if (buttonElement) {
+                  // Xóa class 'active' khỏi TẤT CẢ các nút
+                  buttonElement.className = 'filter-btn'; 
+              }
+          }
+
+          // Đặt class 'active' cho nút được chọn
+          var selectedButton = document.getElementById('btn_' + category);
+          if (selectedButton) {
+              selectedButton.className = 'filter-btn active'; 
+          }
+
+          // 2. LỌC TỪNG SẢN PHẨM
+          // Lấy tất cả các thẻ sản phẩm trong trang
+          var allCards = document.querySelectorAll('.product-card');
+
+          for (var j = 0; j < allCards.length; j++) {
+              var card = allCards[j];
+              
+              if (category === 'all') {
+                  // Nếu chọn TẤT CẢ, hiển thị tất cả các thẻ
+                  card.style.display = 'block'; 
+              } else {
+                  // Kiểm tra xem thẻ sản phẩm (card) có chứa class trùng với category không
+                  if (card.classList.contains(category)) {
+                      // Nếu trùng, hiển thị thẻ đó
+                      card.style.display = 'block';
+                  } else {
+                      // Nếu không trùng, ẩn thẻ đó
+                      card.style.display = 'none'; 
+                  }
+              }
+          }
+      }
+      
+      // Hàm khởi tạo, chạy khi trang tải xong
+      function initFilter() {
+          // Gọi hàm lọc TẤT CẢ để hiển thị tất cả sản phẩm ban đầu và tô đỏ nút TẤT CẢ
+          filterProducts('all');
+      }
+  </script>
+
+</body>
+</html>
