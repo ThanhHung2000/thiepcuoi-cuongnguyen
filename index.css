@@ -13,7 +13,7 @@ body {
 
 .card {
     background-color: white;
-    padding: 50px 30px;
+    padding: 30px 30px;
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -151,7 +151,7 @@ img.couple-photo {
     width: 100%;
 
     /* 3. Cấu hình hiển thị ảnh nền */
-    background-size: contain;      /* Đảm bảo toàn bộ ảnh hiển thị. Có thể để lại khoảng trắng nếu tỷ lệ khác */
+    background-size: cover;      /* Đảm bảo toàn bộ ảnh hiển thị. Có thể để lại khoảng trắng nếu tỷ lệ khác */
     background-repeat: no-repeat;  /* Rất quan trọng khi dùng contain để ảnh không bị lặp */
     /* background-position: center center; */
     
@@ -162,5 +162,5 @@ img.couple-photo {
     justify-content: center;
     text-align: center;
     
-    padding: 20px;
+    padding: 0px;
 }
