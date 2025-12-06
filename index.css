@@ -151,9 +151,9 @@ img.couple-photo {
     width: 100%;
 
     /* 3. Cấu hình hiển thị ảnh nền */
-    background-size: cover;          /* Phủ kín toàn bộ div.trangdau, không để khoảng trắng */
-    background-repeat: no-repeat;    /* Không lặp lại ảnh */
-    background-position: center center; /* Căn giữa ảnh */
+    background-size: contain;      /* Đảm bảo toàn bộ ảnh hiển thị. Có thể để lại khoảng trắng nếu tỷ lệ khác */
+    background-repeat: no-repeat;  /* Rất quan trọng khi dùng contain để ảnh không bị lặp */
+    background-position: center center;
     
     /* 4. Căn giữa nội dung trong div.trangdau */
     display: flex;
