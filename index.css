@@ -172,3 +172,24 @@ img.couple-photo {
     text-align: center;
     padding: 30px;
 }
+/* index.css */
+
+#music-control {
+    position: fixed; /* Giữ nút cố định khi cuộn */
+    bottom: 20px; /* Cách đáy 20px */
+    left: 30px; /* Cách lề phải 20px */
+    padding: 10px 15px;
+    background-color: #9c79e3; /* Màu đỏ đô, có thể tùy chỉnh */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1001; /* Đảm bảo nó nằm trên tất cả các phần tử khác */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#music-control:hover {
+    background-color: #9c79e3;
+}
