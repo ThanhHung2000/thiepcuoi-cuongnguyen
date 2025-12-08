@@ -7,7 +7,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    padding: 20px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -25,15 +25,7 @@ body {
 
 }
 /* ÁP DỤNG MEDIA QUERY CHO MÀN HÌNH NHỎ (điện thoại) */
-@media (max-width: 600px) {
-    .card {
-        /* Đảm bảo card vừa khít màn hình */
-        width: calc(100% - 20px); /* Lấy 100% chiều rộng trừ đi 20px (10px mỗi bên) */
-        
-        /* Giảm padding để có thêm không gian cho nội dung */
-        padding: 20px 10px; 
-    }
-}
+
 .greeting {
     font-size: 1.1em;
     margin-bottom: 5px;
