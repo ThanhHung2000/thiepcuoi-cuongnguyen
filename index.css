@@ -1,7 +1,7 @@
 body {
     font-family: 'Times New Roman', serif;
     background-color: #f7f0e6; /* Màu nền kem nhạt */
-    color: #3d3b38;
+    color: #e86a83;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@ body {
 }
 
 .card {
-    background-color: white;
+  
     padding: 30px 30px;
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
@@ -32,12 +32,17 @@ body {
 
 h1 {
     color: #8b0000; /* Màu đỏ đậm */
-    font-family: 'Great Vibes', sans-serif;
+    /* font-family: 'Great Vibes', sans-serif; */
     font-size: 2em;
     margin-top: 10px;
     margin-bottom: 5px;
 }
-
+h2 {
+    /* font-family: 'Great Vibes', sans-serif; */
+    font-size: 1.8em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
 #ten-khach-moi {
     color: #000000; 
     font-size: 1.6em;
