@@ -78,7 +78,7 @@ h2 {
 /* Sử dụng lớp mà bạn đã gán cho thẻ <img>: class="couple-photo" */
 img.couple-photo {
     /* Đảm bảo chiều rộng ảnh được giới hạn */
-    max-width: 280px !important; 
+    max-width: 290px !important; 
     width: 100% !important; 
     height: auto !important; 
     /* Kiểm tra màu (Ví dụ: đặt màu viền để xem CSS có được áp dụng không) */
