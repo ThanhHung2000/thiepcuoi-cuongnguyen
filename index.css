@@ -207,13 +207,8 @@ img.couple-photo {
     margin-bottom: 5px;
     letter-spacing: 2px;
 }
-/* --- Định dạng phần Header và Tên Cô Dâu --- */
-.header-bride h4 {
-    color: #A93226; /* Màu đỏ đô cho tiêu đề */
-    font-size: 24px;
-    margin-bottom: 5px;
-    letter-spacing: 2px;
-}
+
+
 
 .bride-name {
     font-family: 'Times New Roman', serif; /* Thay bằng font chữ thư pháp nếu có */
@@ -334,8 +329,81 @@ img.couple-photo {
     display: block;
 }
 
+/* --- Định dạng phần Header --- */
+.header-bride2 {
+    /* Quan trọng: Giới hạn chiều rộng bằng với ảnh */
+    max-width: 400px;
+    /* Quan trọng: Căn giữa khối header */
+    margin: 0 auto; 
+    /* Quan trọng: Căn lề nội dung (chữ CÔ DÂU) sang trái */
+    text-align: right; 
 
+}
 
+/* ❌ XÓA BỎ quy tắc .bride-name cũ nếu không dùng nữa */
+
+/* 1. CONTAINER MỚI: Bọc cả Tên và Ảnh */
+.photo-wrapper2 {
+    max-width: 400px;
+    margin: 0 auto 30px;
+    position: relative; /* RẤT QUAN TRỌNG: Làm điểm neo cho tên */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. Định vị Tên Cô Dâu (ĐẶT TÊN ĐÈ LÊN ẢNH) */
+.bride-name-overlay2 {
+    position: absolute; /* Cho phép đặt tên tùy ý */
+    top: 20px; /* Cách mép trên 20px */
+    right: 20px; /* Cách mép trái 20px */
+    z-index: 10; /* Đảm bảo tên nằm trên ảnh */
+    
+    /* Định dạng chữ */
+    color: #FFFFFF; /* Màu trắng để nổi bật trên ảnh */
+    font-family: 'Times New Roman', cursive; 
+    font-size: 36px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Thêm bóng chữ cho dễ đọc */
+    margin: 0; /* Xóa margin mặc định */
+    padding: 0;
+}
+
+/* 3. Đảm bảo Ảnh Cô Dâu vừa vặn trong Wrapper */
+.bride-photo2 {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.bride-message2 {
+    position: absolute; 
+    /* Căn chỉnh vị trí */
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    width: 100%;
+    
+    /* Thiết lập nền mờ và padding đã được GIẢM */
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(2px); 
+    padding: 8px 7px; /* GIẢM PADDING XUỐNG CÒN 8px trên dưới, 10px hai bên */
+    
+    /* Màu chữ và định dạng chữ đã được GIẢM kích thước */
+    color: #A93226; /* Màu đỏ đô */
+    text-align: center; 
+    font-size: 12px; /* Tăng nhẹ lại lên 12px để dễ đọc hơn */
+    line-height: 1.2; /* Tăng nhẹ lại để chữ không dính sát nhau */
+    font-weight: bold;
+}
+
+.bride-message2 p {
+/* Đảm bảo không có khoảng cách thừa nào gây lệch */
+    padding: 0;
+    margin: 0.3em 0; /* Chỉ giữ margin trên/dưới để tách các đoạn */
+    
+    color: #A93226; 
+    font-weight: bold; 
+    
+    /* Đảm bảo nội dung chữ bên trong P cũng được căn giữa */
+    text-align: center;
+}
 
 
 
