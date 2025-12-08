@@ -201,7 +201,12 @@ img.couple-photo {
     background-color: #FFF9F9; /* Màu nền nhẹ, có thể thay đổi */
     min-height: 100vh;
 }
-
+.chamngon {
+    color: #A93226; /* Màu đỏ đô cho tiêu đề */
+    font-size: 18px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
 /* --- Định dạng phần Header và Tên Cô Dâu --- */
 .header-bride h4 {
     color: #A93226; /* Màu đỏ đô cho tiêu đề */
