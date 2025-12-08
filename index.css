@@ -12,8 +12,7 @@ body {
 }
 
 .card {
-  
-/* Giữ nguyên các thuộc tính khác */
+    /* Các thuộc tính cũ giữ nguyên... */
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -22,7 +21,9 @@ body {
     border: 3px solid #ce9999;
     position: relative;
     overflow: hidden;
-
+    
+    /* 🔥 KHẮC PHỤC: Thêm màu nền cho card */
+    background-color: #FFFFFF; /* Màu trắng để tách khỏi nền tím body */
 }
 /* ÁP DỤNG MEDIA QUERY CHO MÀN HÌNH NHỎ (điện thoại) */
 
@@ -253,7 +254,7 @@ img.couple-photo {
     /* Thiết lập nền mờ và padding đã được GIẢM */
     background: rgba(255, 255, 255, 0.1); 
     backdrop-filter: blur(2px); 
-    padding: 8px 7px; /* GIẢM PADDING XUỐNG CÒN 8px trên dưới, 10px hai bên */
+    padding: 8px 0px; /* GIẢM PADDING XUỐNG CÒN 8px trên dưới, 10px hai bên */
     
     /* Màu chữ và định dạng chữ đã được GIẢM kích thước */
     color: #A93226; /* Màu đỏ đô */
@@ -337,6 +338,7 @@ img.couple-photo {
     margin: 0 auto; 
     /* Quan trọng: Căn lề nội dung (chữ CÔ DÂU) sang trái */
     text-align: right; 
+    font-size: 20px;
 
 }
 
@@ -383,7 +385,7 @@ img.couple-photo {
     /* Thiết lập nền mờ và padding đã được GIẢM */
     background: rgba(255, 255, 255, 0.2); 
     backdrop-filter: blur(2px); 
-    padding: 8px 7px; /* GIẢM PADDING XUỐNG CÒN 8px trên dưới, 10px hai bên */
+    padding: 8px 0px; /* GIẢM PADDING XUỐNG CÒN 8px trên dưới, 10px hai bên */
     
     /* Màu chữ và định dạng chữ đã được GIẢM kích thước */
     color: #A93226; /* Màu đỏ đô */
@@ -404,6 +406,171 @@ img.couple-photo {
     /* Đảm bảo nội dung chữ bên trong P cũng được căn giữa */
     text-align: center;
 }
+.section-page.page-bride,
+.section-page.page-bride2 {
+    /* Giảm padding trên và dưới xuống */
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+
+}
 
 
+// thong tin gia đình
+/* --- Thiết lập chung cho khu vực Thông tin gia đình --- */
+.page-family-info {
+    padding: 0 0;
+}
 
+/* --- Thiết lập cho mỗi khối (Nhà Trai và Nhà Gái) --- */
+.family-block {
+    display: flex; /* Bật Flexbox để ảnh và chữ cạnh nhau */
+    align-items: flex-start; /* Căn chỉnh nội dung lên đầu */
+    justify-content: center;
+    max-width: 650px; /* Chiều rộng tối đa cho mỗi hàng */
+    margin: 0 auto; /* Căn giữa hàng */
+    padding:  0;
+}
+
+/* --- Đảo ngược thứ tự cho KHỐI NHÀ TRAI (Ảnh trái - Chữ phải) --- */
+.family-block.groom-side {
+    flex-direction: row; /* Ảnh (block-photo) trái, Thông tin (block-info) phải */
+}
+
+/* --- Đảo ngược thứ tự cho KHỐI NHÀ GÁI (Chữ trái - Ảnh phải) --- */
+.family-block.bride-side {
+    flex-direction: row; /* Thông tin (block-info) trái, Ảnh (block-photo) phải */
+}
+
+/* --- Định dạng Ảnh (Block Photo) --- */
+.block-photo {
+    flex: 0 0 50%; /* Chiếm 50% chiều rộng */
+    max-width: 300px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.block-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Định dạng Thông tin (Block Info) --- */
+.block-info {
+    flex: 1; /* Chiếm phần còn lại */
+    padding: 0;
+}
+
+/* Căn chữ bên trong khối */
+.text-right {
+    text-align: right; /* Căn phải cho khối Nhà Trai */
+}
+.text-left {
+    text-align: left; /* Căn trái cho khối Nhà Gái */
+}
+
+/* --- Định dạng Chữ --- */
+.title-family {
+    color: #003366; 
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: center; 
+}
+
+.block-info p {
+    color: #003366; 
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center; 
+
+}
+
+.title-couple {
+    color: #A93226; 
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 3px;
+    text-align: center; 
+}
+
+.name-couple {
+    font-family: 'Times New Roman', cursive; /* Hoặc font thư pháp */
+    font-size: 36px;
+    color: #A93226;
+    margin-top: 0;
+}
+
+/* --- Media Query cho thiết bị di động (ảnh sẽ xếp chồng) --- */
+@media (max-width: 600px) {
+    .family-block {
+        flex-direction: column; /* Xếp chồng lên nhau */
+        align-items: center;
+    }
+
+    .block-photo {
+        flex: none;
+        width: 90%;
+        margin-bottom: 15px;
+        order: -1; /* Đẩy ảnh lên trên cùng theo mặc định */
+    }
+
+    .block-info {
+        width: 90%;
+        text-align: center !important; /* Căn giữa tất cả chữ */
+    }
+}
+//chu defs
+/* --- PHẦN BÁO TIN CHUNG (LỄ THÀNH HÔN) --- */
+
+/*
+ * --------------------------------------------------
+ * THIẾT KẾ KHỐI BÁO TIN (LỄ THÀNH HÔN) ĐÃ TỐI ƯU
+ * --------------------------------------------------
+ */
+
+.baotin {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif; 
+    color: #4A4A4A; /* Màu chữ */
+    
+    /* 1. NỀN VÀ KHUNG HIỂN THỊ (Sử dụng !important để ưu tiên tuyệt đối) */
+    background-color: #FFFf !important; /* Màu nền KEM NHẠT */
+    padding: 30px 20px; /* Đệm bên trong */
+    border: 1px solid #A93226; /* Đổi viền sang màu đỏ đậm hơn cho dễ thấy */
+    border-radius: 8px; 
+    
+    /* 2. ĐỊNH HÌNH VÀ CĂN CHỈNH */
+    max-width: 400px; 
+    width: 90%; 
+    margin: 30px auto; 
+    
+    position: relative;
+    z-index: 5; /* Đảm bảo nó nằm trên các thành phần khác */
+}
+
+/* --- TIÊU ĐỀ LỚN: LỄ THÀNH HÔN --- */
+.baotin .chude {
+    color: #A93226; /* Màu đỏ đậm */
+    text-transform: uppercase;
+    font-size: 1.8em; 
+    font-weight: bold;
+    letter-spacing: 2px;
+    
+    /* Điều chỉnh đường kẻ ngang */
+    /* border-top: 1px solid #A93226;  */
+    padding-top: 15px;
+    margin-top: 0;
+    margin-bottom: 5px; 
+}
+
+/* --- ĐOẠN VĂN BẢN TRÂN TRỌNG BÁO TIN --- */
+.baotin p {
+    color: #4A4A4A; /* Màu xám đậm */
+    font-size: 1.1em;
+    font-weight: 300; 
+    line-height: 1.6;
+    margin: 5px 0 0 0;
+}
