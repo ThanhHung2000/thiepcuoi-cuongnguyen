@@ -1,7 +1,7 @@
 body {
     font-family: 'Times New Roman', serif;
     background-color: #f7f0e6; /* Màu nền kem nhạt */
-    color: #e86a83;
+    color: #f35b7a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,17 +13,29 @@ body {
 
 .card {
   
-    padding: 30px 30px;
+/* Giữ nguyên các thuộc tính khác */
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
-    max-width: 550px;
+    max-width: 600px;
     width: 100%;
-    border: 3px solid #d8a77a; /* Khung vàng đồng */
+    border: 3px solid #d8a77a;
     position: relative;
     overflow: hidden;
-}
 
+    /* Padding mặc định cho Desktop */
+    padding: 30px 30px;
+}
+/* ÁP DỤNG MEDIA QUERY CHO MÀN HÌNH NHỎ (điện thoại) */
+@media (max-width: 600px) {
+    .card {
+        /* Đảm bảo card vừa khít màn hình */
+        width: calc(100% - 20px); /* Lấy 100% chiều rộng trừ đi 20px (10px mỗi bên) */
+        
+        /* Giảm padding để có thêm không gian cho nội dung */
+        padding: 20px 10px; 
+    }
+}
 .greeting {
     font-size: 1.1em;
     margin-bottom: 5px;
@@ -79,7 +91,6 @@ img.couple-photo {
     max-width: 300px !important; 
     width: 100% !important; 
     height: auto !important; 
-    
     /* Kiểm tra màu (Ví dụ: đặt màu viền để xem CSS có được áp dụng không) */
     border: 5px solid #ccccff !important; /* Đặt tạm thời để kiểm tra */
     
