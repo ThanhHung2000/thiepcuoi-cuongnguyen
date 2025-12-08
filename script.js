@@ -10,7 +10,7 @@ function togglePlay() {
     if (isPlaying) {
         // Nếu đang chạy, thì dừng lại
         audio.pause();
-        musicButton.innerHTML = '▶️ Play Music'; // Đổi biểu tượng
+        musicButton.innerHTML = '▶️'; // Đổi biểu tượng
         isPlaying = false;
     } else {
         // Nếu đang dừng, thì chạy
@@ -19,9 +19,9 @@ function togglePlay() {
             // Xử lý lỗi nếu trình duyệt chặn tự động phát
             console.error("Lỗi phát nhạc: ", error);
             //alert("Xin lỗi, trình duyệt của bạn chặn tự động phát nhạc. Vui lòng bấm lại nút 'Play Music' lần nữa.");
-            musicButton.innerHTML = '▶️ Play ';
+            musicButton.innerHTML = '▶️';
         });
-        musicButton.innerHTML = '⏸️ Pause '; // Đổi biểu tượng
+        musicButton.innerHTML = '⏸️'; // Đổi biểu tượng
         isPlaying = true;
     }
 }
