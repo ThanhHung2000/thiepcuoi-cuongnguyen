@@ -1,6 +1,6 @@
 body {
     font-family: 'Times New Roman', serif;
-    background-color: #f7f0e6; /* Màu nền kem nhạt */
+    background-color: #9c79e3; /* Màu nền kem nhạt */
     color: #f35b7a;
     display: flex;
     justify-content: center;
@@ -23,8 +23,6 @@ body {
     position: relative;
     overflow: hidden;
 
-    /* Padding mặc định cho Desktop */
-    padding: 30px 30px;
 }
 /* ÁP DỤNG MEDIA QUERY CHO MÀN HÌNH NHỎ (điện thoại) */
 @media (max-width: 600px) {
@@ -164,19 +162,21 @@ img.couple-photo {
     /* 2. Đặt kích thước cho trang đầu */
     /* Quan trọng: Đảm bảo chiều cao tối thiểu bằng chiều cao màn hình để ảnh phủ kín */
     min-height: 100vh; 
+    /* 1. THÊM GIỚI HẠN CHIỀU RỘNG TỐI ĐA */
+    /* max-width: 600px;
     width: 100%;
-
+    margin-left: auto;
+    margin-right: auto; */
     /* 3. Cấu hình hiển thị ảnh nền */
     background-size: cover;      /* Đảm bảo toàn bộ ảnh hiển thị. Có thể để lại khoảng trắng nếu tỷ lệ khác */
     background-repeat: no-repeat;  /* Rất quan trọng khi dùng contain để ảnh không bị lặp */
     /* background-position: center center; */
     
-    /* 4. Căn giữa nội dung trong div.trangdau */
+/* ... (Các thuộc tính Flexbox khác) ... */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    
-    padding: 0px;
+    padding: 30px;
 }
