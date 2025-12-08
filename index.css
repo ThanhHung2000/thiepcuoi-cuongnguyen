@@ -153,7 +153,7 @@ img.couple-photo {
     
     /* 2. Đặt kích thước cho trang đầu */
     /* Quan trọng: Đảm bảo chiều cao tối thiểu bằng chiều cao màn hình để ảnh phủ kín */
-    min-height: 100vh; 
+    min-height: 100dvh;
     /* 1. THÊM GIỚI HẠN CHIỀU RỘNG TỐI ĐA */
     /* max-width: 600px;
     width: 100%;
