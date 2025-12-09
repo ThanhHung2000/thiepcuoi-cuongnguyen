@@ -453,7 +453,6 @@ img.couple-photo {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 0px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -481,7 +480,7 @@ img.couple-photo {
 
 .block-info p {
     color: #003366; 
-    font-size: 18px;
+    font-size: 15px;
     margin: 0;
     line-height: 1.2;
     text-align: center; 
@@ -503,26 +502,8 @@ img.couple-photo {
     margin-top: 0;
 }
 
-/* --- Media Query cho thiết bị di động (ảnh sẽ xếp chồng) --- */
-@media (max-width: 600px) {
-    .family-block {
-        flex-direction: column; /* Xếp chồng lên nhau */
-        align-items: center;
-    }
 
-    .block-photo {
-        flex: none;
-        width: 90%;
-        margin-bottom: 15px;
-        order: -1; /* Đẩy ảnh lên trên cùng theo mặc định */
-    }
 
-    .block-info {
-        width: 90%;
-        text-align: center !important; /* Căn giữa tất cả chữ */
-    }
-}
-//chu defs
 /* --- PHẦN BÁO TIN CHUNG (LỄ THÀNH HÔN) --- */
 
 /*
