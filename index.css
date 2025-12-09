@@ -574,3 +574,75 @@ font-size: 18px;
     font-weight: bold;
     display: block; 
 }
+
+/* --- Thiết lập chung cho phần Gallery --- */
+.gallery-title {
+    color: #A93226; 
+    font-size: 24px;
+    margin: 40px 0 15px 0; /* Khoảng cách trên và dưới tiêu đề */
+    text-align: center;
+    font-weight: bold;
+}
+
+/* --- Container cho 3 ảnh (Sử dụng Flexbox) --- */
+.photo-gallery-trio {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Căn chỉnh ảnh lên đầu theo chiều dọc */
+    gap: 15px; /* Khoảng cách giữa các ảnh */
+    margin: 0 auto 40px auto;
+    max-width: 800px; 
+    padding: 0 10px;
+}
+
+/* --- Định dạng chung cho mỗi ảnh --- */
+.photo-item {
+    overflow: hidden;
+    /* Thêm một chút border và shadow để tạo độ nổi */
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 0; /* Đảm bảo không có padding thừa */
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Định dạng cho ảnh phụ (side) --- */
+.photo-item.photo-side {
+    /* flex: 0 1 25% có nghĩa là nó sẽ cố gắng chiếm 25% không gian */
+    flex: 0 1 25%; 
+    max-width: 180px; 
+}
+
+/* --- Định dạng cho ảnh chính (main) --- */
+.photo-item.photo-main {
+    /* flex: 0 1 40% có nghĩa là nó sẽ chiếm 40% không gian và lớn hơn ảnh phụ */
+    flex: 0 1 40%; 
+    max-width: 300px; 
+}
+
+/* --- Responsive: Xếp chồng ảnh trên mobile --- */
+@media (max-width: 600px) {
+    .photo-gallery-trio {
+        flex-direction: column; /* Chuyển sang xếp dọc */
+        align-items: center; /* Căn giữa */
+        gap: 30px; /* Khoảng cách lớn hơn giữa các ảnh khi xếp chồng */
+    }
+    
+    .photo-item,
+    .photo-item.photo-side,
+    .photo-item.photo-main {
+        flex: none; /* Loại bỏ tính toán flex */
+        width: 80%; /* Chiếm 80% chiều rộng màn hình */
+        max-width: 350px; 
+    }
+
+    /* Đảm bảo ảnh chính (main) nằm ở trên cùng khi xếp chồng */
+    .photo-item.photo-main {
+        order: -1; 
+    }
+}
