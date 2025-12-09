@@ -197,7 +197,7 @@ img.couple-photo {
 
 /* --- Thiết lập chung cho một trang mới --- */
 .section-page {
-    padding: 60px 20px;
+    padding: 5px 5px;
     text-align: center;
     background-color: #FFF9F9; /* Màu nền nhẹ, có thể thay đổi */
     min-height: 100vh;
@@ -276,15 +276,6 @@ img.couple-photo {
     text-align: center;
 }
 
-
-
-/* --- Thiết lập chung cho một trang mới --- */
-.section-page {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #FFF9F9; /* Màu nền nhẹ, có thể thay đổi */
-    min-height: 100vh;
-}
 
 /* --- Định dạng phần Header --- */
 .header-bride {
@@ -407,10 +398,11 @@ img.couple-photo {
     text-align: center;
 }
 .section-page.page-bride,
-.section-page.page-bride2 {
+.section-page.page-bride2,
+.section-page.page-family-info {
     /* Giảm padding trên và dưới xuống */
-    padding-top: 20px; 
-    padding-bottom: 20px; 
+    padding-top: 0px; 
+    padding-bottom: 0px; 
 
 }
 
@@ -519,15 +511,13 @@ img.couple-photo {
     
     /* 1. NỀN VÀ KHUNG HIỂN THỊ (Sử dụng !important để ưu tiên tuyệt đối) */
     background-color: #FFFf !important; /* Màu nền KEM NHẠT */
-    padding: 30px 20px; /* Đệm bên trong */
+    padding: 5px 5px; /* Đệm bên trong */
     border: 1px solid #A93226; /* Đổi viền sang màu đỏ đậm hơn cho dễ thấy */
     border-radius: 8px; 
-    
     /* 2. ĐỊNH HÌNH VÀ CĂN CHỈNH */
     max-width: 400px; 
     width: 90%; 
     margin: 30px auto; 
-    
     position: relative;
     z-index: 5; /* Đảm bảo nó nằm trên các thành phần khác */
 }
@@ -542,7 +532,7 @@ img.couple-photo {
     
     /* Điều chỉnh đường kẻ ngang */
     /* border-top: 1px solid #A93226;  */
-    padding-top: 15px;
+    padding: 0px;
     margin-top: 0;
     margin-bottom: 5px; 
 }
@@ -554,4 +544,5 @@ img.couple-photo {
     font-weight: 300; 
     line-height: 1.6;
     margin: 5px 0 0 0;
+    padding: 0px;
 }
