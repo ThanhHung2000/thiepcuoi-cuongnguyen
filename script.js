@@ -183,7 +183,7 @@ window.onload = function() {
             if (error.name !== "AbortError") {
                 console.error("Lỗi phát nhạc:", error);
                 // Bạn có thể giữ lại alert nếu thấy cần thiết
-                 alert("Trình duyệt chặn tự động phát nhạc. Vui lòng bấm nút Play để kích hoạt.");
+                 //alert("Trình duyệt chặn tự động phát nhạc. Vui lòng bấm nút Play để kích hoạt.");
             }
             // Đặt lại trạng thái nút ban đầu nếu bị chặn
             musicButton.innerHTML = '▶️'; // Hiển thị PLAY
