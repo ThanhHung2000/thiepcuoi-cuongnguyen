@@ -164,6 +164,102 @@ function displayGuestName() {
         }
     }
 }
+
+// =======================================================
+// 🖼️ PHẦN 4: CODE ĐIỀU KHIỂN MAIN SLIDER VÀ THUMBNAIL 🖼️
+// =======================================================
+
+// 1. Lấy các phần tử cần thiết
+const mainImage = document.getElementById('main-image');
+const prevMainBtn = document.querySelector('.prev-main-btn');
+const nextMainBtn = document.querySelector('.next-main-btn');
+const thumbContainer = document.getElementById('miniPhotoContainer');
+const thumbs = document.querySelectorAll('.thumb-item'); // Tất cả ảnh thu nhỏ
+
+const BASE_URL = 'https://thanhhung2000.github.io/thiepcuoi-cuongnguyen/';
+
+// Danh sách đường dẫn ảnh (từ album7.jpg đến album26.jpg)
+const imagePaths = Array.from({ length: 20 }, (_, i) => `${BASE_URL}images/album${i + 7}.jpg`);
+// const imagePaths = Array.from({ length: 20 }, (_, i) => `images/album${i + 7}.jpg`);
+let currentIndex = 0;
+
+// 2. Hàm Cập nhật Ảnh Lớn
+function updateMainImage(index) {
+    // Logic quay vòng (loop)
+    if (index < 0) {
+        currentIndex = imagePaths.length - 1; 
+    } else if (index >= imagePaths.length) {
+        currentIndex = 0; 
+    } else {
+        currentIndex = index;
+    }
+    
+    // Cập nhật đường dẫn ảnh lớn
+    mainImage.src = imagePaths[currentIndex];
+    
+    // Đồng bộ: Cập nhật trạng thái active cho thumbnail
+    updateActiveThumbnail(currentIndex);
+}
+
+// 3. Hàm Cập nhật Thumbnail Active và Cuộn ngang
+function updateActiveThumbnail(index) {
+    // Xóa lớp 'active' khỏi tất cả
+    thumbs.forEach(thumb => {
+        thumb.classList.remove('active');
+    });
+    
+    // Thêm lớp 'active' cho thumbnail hiện tại
+    const currentThumb = document.querySelector(`.thumb-item[data-index="${index}"]`);
+    if (currentThumb) {
+        currentThumb.classList.add('active');
+        
+        // Tự động cuộn thumbnail container để ảnh active hiển thị chính giữa
+        const containerWidth = thumbContainer.clientWidth;
+        const thumbPosition = currentThumb.offsetLeft;
+        const thumbWidth = currentThumb.offsetWidth;
+        
+        // Tính toán vị trí cuộn: đưa ảnh active vào giữa
+        thumbContainer.scrollLeft = thumbPosition - (containerWidth / 2) + (thumbWidth / 2);
+    }
+}
+
+
+// 4. Gán Sự kiện cho các nút
+if (prevMainBtn) {
+    prevMainBtn.addEventListener('click', () => {
+        updateMainImage(currentIndex - 1);
+    });
+}
+
+if (nextMainBtn) {
+    nextMainBtn.addEventListener('click', () => {
+        updateMainImage(currentIndex + 1);
+    });
+}
+
+// 5. Gán Sự kiện cho các Thumbnail
+if (thumbContainer) {
+    thumbs.forEach(thumb => {
+        thumb.addEventListener('click', (event) => {
+            // Lấy data-index (được set trong HTML)
+            const index = parseInt(event.currentTarget.dataset.index);
+            if (!isNaN(index)) {
+                updateMainImage(index);
+            }
+        });
+    });
+}
+
+// 🔥 HÀM KHỞI TẠO SLIDER
+function initAlbumSlider() {
+        if (mainImage && imagePaths.length > 0) 
+        {
+           updateMainImage(0); 
+        }
+}
+
+
+
 // =======================================================
 // 🚀 PHẦN 3: GỌI HÀM KHỞI TẠO KHI TẢI TRANG 🚀
 // =======================================================
@@ -171,7 +267,9 @@ function displayGuestName() {
 window.onload = function() {
     initSnow();
     displayGuestName(); // 🔥 GỌI HÀM HIỂN THỊ TÊN
+// 🔥 AUTO-PLAY LOGIC: Cố gắng phát nhạc tự động
+    initAlbumSlider(); // 🔥 GỌI HÀM KHỞI TẠO ALBUM SLIDER TẠI ĐÂY
+    // Các logic khác có thể thêm vào đây
 };
-
 // Cập nhật lại giới hạn khi thay đổi kích thước cửa sổ
 window.onresize = resizeSnow;

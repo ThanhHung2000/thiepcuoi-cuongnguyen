@@ -1,6 +1,6 @@
 body {
     font-family: 'Times New Roman', serif;
-    background-color: #9c79e3; /* Màu nền kem nhạt */
+    background-color: #cfccd6; /* Màu nền kem nhạt */
     color: #f35b7a;
     display: flex;
     justify-content: center;
@@ -621,43 +621,45 @@ font-size: 18px;
 /* --- Định dạng cho ảnh chính (main) --- */
 .photo-item.photo-main {
     /* flex: 0 1 40% có nghĩa là nó sẽ chiếm 40% không gian và lớn hơn ảnh phụ */
-    flex: 0 1 40%; 
+    flex: 0 1 50%; 
     max-width: 300px; 
 }
 
 
 /* --- ĐỊNH DẠNG RIÊNG CHO KHỐI LỄ CƯỚI TẠI NHÀ THỜ --- */
-
+.tieccuoi-ceremon,
 .church-ceremony-box {
     /* Ghi đè màu nền và viền để khớp với ảnh bạn gửi */
-    background-color: #f0f4ff !important; /* Màu xanh/tím nhạt */
-    border: 1px solid #c8d3ff; /* Viền xanh nhạt */
+    background-color: #cfccd6 !important; /* Màu xanh/tím nhạt */
+    border: 1px solid #cfccd6; /* Viền xanh nhạt */
     border-radius: 10px; /* Bo tròn góc */
-    
+    max-width: 400px; 
     /* Điều chỉnh font-color cho toàn bộ khối này */
     color: #003366; /* Màu xanh đậm cho chữ chung */
     padding: 10px 10px; /* Tăng padding để rộng hơn */
-    margin-top: 0px; /* Khoảng cách với khối trước */
+    margin-top: 10px; /* Khoảng cách với khối trước */
+    margin: 10px auto;
+    font-size: 1.2em;
 }
 
 /* --- Định dạng Tiêu đề LỄ CƯỚI --- */
+.tieccuoi-ceremon .chude1,
 .church-ceremony-box .chude {
     color: #003366; /* Màu xanh đậm */
-    font-size: 1.8em;
     margin-bottom: 5px;
 }
 
 /* --- Định dạng Thứ trong tuần --- */
+.day-of-week-nhagai,
 .day-of-week-church {
-    font-size: 1.2em;
     font-weight: bold;
     color: #003366;
     margin: 5px 0;
 }
 
 /* --- Định dạng Ngày Tháng (Chữ lớn) --- */
+.date-nha-gai,
 .date-church {
-    font-size: 2.8em;
     font-weight: bold;
     color: #003366;
     line-height: 1.2;
@@ -665,17 +667,486 @@ font-size: 18px;
 }
 
 /* --- Định dạng Địa điểm --- */
+.location_nhagai,
 .location-church {
-    font-size: 1.1em;
     color: #003366;
     margin: 0 0 5px 0;
 }
 
 /* --- Định dạng Ngày Âm lịch --- */
+.lunisolar-nhagai,
 .lunisolar-church {
+    font-style: italic;
+    color: #4A4A4A;
+    margin: 0;
+}
+//
+/* --- Thiết lập chung cho Trang Ngày Lịch Chi Tiết --- */
+.section-page.page-detailed-date {
+    background-color: #FFFFFF; /* Nền trắng */
+    padding: 40px 20px;
+    min-height: auto; /* Không cần min-height 100vh */
+}
+
+.date-calendar-container {
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    color: #003366; /* Màu chữ chung xanh đậm */
+}
+
+.event-title-h11 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    position: relative;
+}
+.event-title-h4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background-color: #003366;
+}
+
+.time-and-day {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+.time-main {
+    font-weight: bold;
+    color: #A93226; /* Màu đỏ đô */
+}
+
+/* --- Dòng Ngày Tháng Chính --- */
+.main-date-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 20px 0;
+    font-weight: bold;
+}
+
+.month-span, .year-span {
+    font-size: 1.2em;
+    padding: 0 10px;
+}
+
+.date-big {
+    font-size: 4em; /* Số ngày lớn */
+    border-left: 2px solid #003366;
+    border-right: 2px solid #003366;
+    padding: 0 20px;
+    line-height: 1;
+    color: #A93226; /* Màu đỏ đô cho ngày chính */
+}
+
+.lunisolar-detailed {
     font-style: italic;
     font-size: 0.9em;
     color: #4A4A4A;
+    margin-bottom: 25px;
+}
+
+/* --- Nút Xác nhận Tham dự (style nhỏ hơn) --- */
+.btn-rsvp-small {
+    display: inline-block;
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-rsvp-small:hover {
+    background-color: #333;
+}
+
+/* --- Chú thích SAVE THE DATE --- */
+.save-the-date-note {
+    font-size: 0.8em;
+    color: #A93226;
+    margin: 30px 0 20px 0;
+}
+
+/* --- BẢNG LỊCH (Sử dụng Grid) --- */
+.calendar-grid {
+    max-width: 350px;
+    margin: 0 auto;
+    border: 1px solid #ccc; /* Viền bao ngoài */
+    overflow: hidden;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #c8d3ff; /* Nền xanh nhạt */
+    color: #003366;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.calendar-days, .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 cột bằng nhau */
+    text-align: center;
+}
+
+.calendar-days {
+    background-color: #eef2ff; /* Nền sáng hơn */
+    font-weight: bold;
+    padding: 5px 0;
+    font-size: 0.9em;
+}
+
+.calendar-dates span {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1em;
+}
+
+.calendar-dates span:nth-child(7n) { /* Cột Chủ Nhật (CN) */
+    color: #A93226; /* Màu đỏ cho CN */
+}
+
+/* Đánh dấu Ngày Cưới */
+.wedding-day {
+    /* ❌ XÓA: background-color: #A93226; */
+    color: #A93226 !important; /* Màu đỏ cho số 26 */
+    /* ❌ XÓA: border-radius: 50%; */
+    
+    /* Thiết lập lại kích thước và căn chỉnh */
+    width: 20px; /* Tăng nhẹ kích thước để có không gian cho trái tim */
+    height: 20px;
+    line-height: 35px;
+    margin: 4px auto;
+    display: flex; /* Sử dụng flex để căn số 26 */
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+/* Thêm biểu tượng trái tim lớn làm nền */
+.wedding-day::before {
+    content: "❤️"; /* Hoặc có thể là '♥' */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em; /* Kích thước trái tim lớn */
+    color: #A93226; /* Màu đỏ đô cho trái tim */
+    z-index: -1; /* Đặt trái tim ra phía sau số 26 */
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.2)); /* Thêm bóng nhẹ cho nổi */
+}
+
+
+/* --- Thiết lập chung cho Trang Địa Điểm --- */
+.section-page.page-locations {
+    /* Loại bỏ màu nền cũ để chỉ dùng màu nền của container */
+    background-color: transparent; 
+    padding: 30px 20px;
+}
+
+/* --- Khối Container chính (Tạo Nền Xanh Nhạt & Bo Tròn Lớn) --- */
+.location-container {
+    background-color: #f0f4ff; /* Màu xanh/tím nhạt như trong ảnh */
+    border: 1px solid #c8d3ff; 
+    border-radius: 40px; /* Bo tròn lớn */
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 40px 30px;
+    text-align: center;
+    color: #003366; /* Màu chữ chung */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    /* Hiệu ứng bo tròn cong phía trên (tùy chọn) */
+    /* border-top-left-radius: 100px; */ 
+    /* border-top-right-radius: 100px; */
+}
+
+.location-title {
+    font-family: 'Times New Roman', cursive; /* Font chữ nghiêng, thư pháp */
+    font-size: 2em;
+    font-style: italic;
+    color: #A93226; /* Màu đỏ đô */
+    margin-bottom: 30px;
+}
+
+/* --- Định dạng Khối Địa Điểm Cá Nhân (Nhà Trai/Nhà Gái) --- */
+.location-block {
+    display: flex;
+    justify-content: space-between; /* Căn nút sang phải */
+    align-items: center; /* Căn chỉnh dọc */
+    padding: 15px 0;
+    margin: 10px 0;
+}
+
+.location-details {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.location-icon {
+    font-size: 2.5em; /* Kích thước biểu tượng */
+    margin-right: 15px;
+    line-height: 1;
+    color: #003366; /* Màu xanh đậm cho icon */
+}
+
+.location-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #003366;
     margin: 0;
+}
+
+.location-address {
+    font-size: 1em;
+    color: #4A4A4A;
+    margin: 5px 0 0 0;
+}
+
+/* --- Định dạng Nút Xem Chỉ Đường --- */
+.btn-map {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #c8d3ff;
+    border-radius: 5px;
+    background-color: white;
+    color: #003366;
+    text-decoration: none;
+    font-size: 0.85em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-map:hover {
+    background-color: #eef2ff;
+}
+
+/* --- Đường kẻ ngăn cách --- */
+.location-separator {
+    border: 0;
+    height: 1px;
+    background: #c8d3ff;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* --- Responsive cho điện thoại --- */
+@media (max-width: 600px) {
+    .location-block {
+        flex-direction: column; /* Xếp chồng (details trên, nút dưới) */
+        align-items: center;
+        text-align: center;
+    }
+    .location-details {
+        margin-bottom: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .location-text {
+        text-align: left; /* Giữ chữ vẫn căn trái */
+    }
+    .location-icon {
+        display: none; /* Ẩn icon trên mobile để tiết kiệm không gian */
+    }
+    .location-container {
+        padding: 30px 20px;
+    }
+}
+
+
+/* --- Thiết lập chung cho Trang Album Ảnh --- */
+.section-page.page-photo-album {
+    background-color: #FFF9F9;
+    padding: 60px 10px; /* Giảm padding ngang để ảnh sát hơn */
+}
+
+/* --- Tiêu đề Album --- */
+.album-title-header {
+    font-family: 'Times New Roman', cursive;
+    font-size: 2.5em;
+    font-style: italic;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+/* Thêm đường kẻ dưới tiêu đề */
+.album-title-header::after {
+    content: "♥️"; /* Biểu tượng trái tim */
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    color: #A93226;
+}
+
+/* --- Khối Grid Container cho Album --- */
+.photo-album-grid {
+    display: grid;
+    /* Chia thành 2 cột: 1 cột 2/3 (3 đơn vị) và 1 cột 1/3 (2 đơn vị) */
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 8px; /* Khoảng cách giữa các ảnh */
+    max-width: 600px;
+    margin: 0 auto;
+    
+    /* Thiết lập bố cục cho ảnh lớn (tùy chọn) */
+    /* grid-template-rows: repeat(3, auto); */
+}
+
+/* --- Thiết lập cho từng item --- */
+.album-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.album-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh lấp đầy khung mà không bị méo */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* --- PHẦN 2: STYLE CHO SLIDER LỚN VÀ THUMBNAIL (Ảnh 7-26) --- */
+
+.album-divider {
+    border: 0;
+    height: 1px;
+    background: #00336630;
+    margin: 40px auto;
+    width: 80%;
+}
+
+.mini-album-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Khối Slider Ảnh Lớn (Ảnh 7-26) --- */
+.main-photo-slider {
+    position: relative;
+    max-width: 600px;
+    width: 95%; /* Chiếm gần hết chiều rộng card */
+    margin: 0 auto;
+    height: 400px; /* Chiều cao cố định cho ảnh lớn */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+.main-photo-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh lấp đầy khung */
+    transition: opacity 0.3s ease-in-out; /* Hiệu ứng chuyển ảnh */
+}
+
+/* Nút Điều Khiển (Mũi Tên) */
+.slider-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5em;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: background 0.3s;
+}
+
+.slider-control:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.prev-main-btn {
+    left: 10px;
+}
+
+.next-main-btn {
+    right: 10px;
+}
+
+/* --- Khối Thumbnail Cuộn Ngang (7-26) --- */
+.mini-album-scroll {
+    max-width: 600px;
+    margin: 10px auto 40px auto;
+    padding: 0 10px;
+}
+
+.mini-photo-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth; /* Cuộn mượt */
+    padding-bottom: 10px; 
+}
+
+/* Ẩn thanh cuộn mặc định */
+.mini-photo-container::-webkit-scrollbar {
+    display: none; 
+}
+.mini-photo-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* --- Định dạng từng bức ảnh thu nhỏ (Thumbnail) --- */
+.thumb-item {
+    width: 80px; 
+    min-width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 8px;
+    cursor: pointer;
+    border: 3px solid transparent; 
+    transition: border 0.2s, opacity 0.2s;
+    opacity: 0.7; /* Ảnh không active bị mờ */
+}
+
+.thumb-item.active {
+    border: 3px solid #A93226; /* Viền đỏ khi được chọn */
+    opacity: 1; /* Ảnh active hiển thị rõ nét */
+}
+
+/* Responsive cho mobile */
+@media (max-width: 600px) {
+    .main-photo-slider {
+        height: 300px;
+    }
+    .thumb-item {
+        width: 60px;
+        min-width: 60px;
+        height: 60px;
+    }
 }
 
