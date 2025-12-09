@@ -625,3 +625,57 @@ font-size: 18px;
     max-width: 300px; 
 }
 
+
+/* --- ĐỊNH DẠNG RIÊNG CHO KHỐI LỄ CƯỚI TẠI NHÀ THỜ --- */
+
+.church-ceremony-box {
+    /* Ghi đè màu nền và viền để khớp với ảnh bạn gửi */
+    background-color: #f0f4ff !important; /* Màu xanh/tím nhạt */
+    border: 1px solid #c8d3ff; /* Viền xanh nhạt */
+    border-radius: 10px; /* Bo tròn góc */
+    
+    /* Điều chỉnh font-color cho toàn bộ khối này */
+    color: #003366; /* Màu xanh đậm cho chữ chung */
+    padding: 10px 10px; /* Tăng padding để rộng hơn */
+    margin-top: 0px; /* Khoảng cách với khối trước */
+}
+
+/* --- Định dạng Tiêu đề LỄ CƯỚI --- */
+.church-ceremony-box .chude {
+    color: #003366; /* Màu xanh đậm */
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+/* --- Định dạng Thứ trong tuần --- */
+.day-of-week-church {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #003366;
+    margin: 5px 0;
+}
+
+/* --- Định dạng Ngày Tháng (Chữ lớn) --- */
+.date-church {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #003366;
+    line-height: 1.2;
+    margin: 5px 0 20px 0; /* Khoảng cách phía dưới ngày tháng */
+}
+
+/* --- Định dạng Địa điểm --- */
+.location-church {
+    font-size: 1.1em;
+    color: #003366;
+    margin: 0 0 5px 0;
+}
+
+/* --- Định dạng Ngày Âm lịch --- */
+.lunisolar-church {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #4A4A4A;
+    margin: 0;
+}
+
