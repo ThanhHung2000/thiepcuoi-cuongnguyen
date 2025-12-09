@@ -1053,7 +1053,7 @@ font-size: 18px;
     max-width: 600px;
     width: 95%; /* Chiếm gần hết chiều rộng card */
     margin: 0 auto;
-    height: 400px; /* Chiều cao cố định cho ảnh lớn */
+    height: 500px; /* Chiều cao cố định cho ảnh lớn */
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -1138,15 +1138,5 @@ font-size: 18px;
     opacity: 1; /* Ảnh active hiển thị rõ nét */
 }
 
-/* Responsive cho mobile */
-@media (max-width: 600px) {
-    .main-photo-slider {
-        height: 300px;
-    }
-    .thumb-item {
-        width: 60px;
-        min-width: 60px;
-        height: 60px;
-    }
-}
+
 
