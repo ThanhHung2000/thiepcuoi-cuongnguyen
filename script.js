@@ -135,13 +135,42 @@ function moveSnow() {
     // Lặp lại hàm moveSnow sau mỗi 50ms
     setTimeout(moveSnow, 50); 
 }
+// =======================================================
+// 💌 PHẦN 4: HIỂN THỊ TÊN KHÁCH MỜI TỪ URL FRAGMENT (#) 💌
+// =======================================================
 
+function displayGuestName() {
+    // 1. Lấy chuỗi fragment (ví dụ: #ten=Ban%20Hung%20va%20Nguoi%20Thuong)
+    const hash = window.location.hash; // Kết quả: #ten=...
+    
+    // 2. Kiểm tra và trích xuất tên
+    // Tìm vị trí của chuỗi "ten=" sau dấu #
+    if (hash.startsWith('#ten=')) {
+        // Cắt bỏ "#ten=" để chỉ lấy giá trị tên
+        let guestNameEncoded = hash.substring(5); // Lấy chuỗi sau ký tự thứ 5 (sau #ten=)
+
+        // 3. Tìm phần tử HTML để hiển thị tên
+        const guestNameElement = document.getElementById('ten-khach-moi-hien-thi');
+
+        if (guestNameEncoded && guestNameElement) {
+            // 4. Giải mã URL (xử lý %20 thành khoảng trắng, ký tự có dấu)
+            let formattedName = decodeURIComponent(guestNameEncoded.replace(/\+/g, ' '));
+            
+            // 5. Chèn tên vào HTML
+            guestNameElement.innerHTML = `Trân trọng kính mời <br> <span>${formattedName}</span>`;
+            
+            // Thêm class để định kiểu cho tên
+            guestNameElement.classList.add('guest-name-style');
+        }
+    }
+}
 // =======================================================
 // 🚀 PHẦN 3: GỌI HÀM KHỞI TẠO KHI TẢI TRANG 🚀
 // =======================================================
 
 window.onload = function() {
     initSnow();
+    displayGuestName(); // 🔥 GỌI HÀM HIỂN THỊ TÊN
     // Các logic khác có thể thêm vào đây
 };
 
