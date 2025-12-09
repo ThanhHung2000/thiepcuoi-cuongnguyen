@@ -205,10 +205,20 @@ img.couple-photo {
 .chamngon {
     color: #A93226; /* Màu đỏ đô cho tiêu đề */
     font-size: 18px;
+    /* Xóa margin trên */
+    margin-top: 0;
     margin-bottom: 5px;
     letter-spacing: 2px;
 }
-
+/* Điều chỉnh margin cho tiêu đề h3 (CÔ DÂU) và h6 (CHÚ RỂ) */
+.header-bride h3,
+.header-bride2 h6 {
+    /* Xóa margin trên */
+    margin-top: 0;
+    /* Giảm margin dưới để sát với ảnh hơn */
+    margin-bottom: 5px; 
+    padding: 0;
+}
 
 
 .bride-name {
@@ -396,6 +406,10 @@ img.couple-photo {
     
     /* Đảm bảo nội dung chữ bên trong P cũng được căn giữa */
     text-align: center;
+}
+h6
+{
+font-size: 18px;
 }
 .section-page.page-bride,
 .section-page.page-bride2,
