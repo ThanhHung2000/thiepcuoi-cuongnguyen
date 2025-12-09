@@ -627,6 +627,7 @@ font-size: 18px;
 
 
 /* --- ĐỊNH DẠNG RIÊNG CHO KHỐI LỄ CƯỚI TẠI NHÀ THỜ --- */
+.tieccuoi-ceremon1,
 .tieccuoi-ceremon,
 .church-ceremony-box {
     /* Ghi đè màu nền và viền để khớp với ảnh bạn gửi */
@@ -643,6 +644,7 @@ font-size: 18px;
 }
 
 /* --- Định dạng Tiêu đề LỄ CƯỚI --- */
+..tieccuoi-ceremon .chude2,
 .tieccuoi-ceremon .chude1,
 .church-ceremony-box .chude {
     color: #003366; /* Màu xanh đậm */
@@ -650,6 +652,7 @@ font-size: 18px;
 }
 
 /* --- Định dạng Thứ trong tuần --- */
+.day-of-week-nhatrai,
 .day-of-week-nhagai,
 .day-of-week-church {
     font-weight: bold;
@@ -658,6 +661,7 @@ font-size: 18px;
 }
 
 /* --- Định dạng Ngày Tháng (Chữ lớn) --- */
+.date-nha-trai,
 .date-nha-gai,
 .date-church {
     font-weight: bold;
@@ -667,6 +671,7 @@ font-size: 18px;
 }
 
 /* --- Định dạng Địa điểm --- */
+.location_nhatrai,
 .location_nhagai,
 .location-church {
     color: #003366;
@@ -674,13 +679,13 @@ font-size: 18px;
 }
 
 /* --- Định dạng Ngày Âm lịch --- */
+.lunisolar-nhatrai,
 .lunisolar-nhagai,
 .lunisolar-church {
     font-style: italic;
     color: #4A4A4A;
     margin: 0;
 }
-//
 /* --- Thiết lập chung cho Trang Ngày Lịch Chi Tiết --- */
 .section-page.page-detailed-date {
     background-color: #FFFFFF; /* Nền trắng */
@@ -1138,5 +1143,15 @@ font-size: 18px;
     opacity: 1; /* Ảnh active hiển thị rõ nét */
 }
 
-
+/* Responsive cho mobile */
+@media (max-width: 600px) {
+    .main-photo-slider {
+        height: 500px;
+    }
+    .thumb-item {
+        width: 60px;
+        min-width: 60px;
+        height: 60px;
+    }
+}
 
