@@ -154,7 +154,8 @@ img.couple-photo {
     
     /* 2. Đặt kích thước cho trang đầu */
     /* Quan trọng: Đảm bảo chiều cao tối thiểu bằng chiều cao màn hình để ảnh phủ kín */
-    min-height: 100dvh;
+    //min-height: 100dvh;
+    min-height: auto;
     /* 1. THÊM GIỚI HẠN CHIỀU RỘNG TỐI ĐA */
     /* max-width: 600px;
     width: 100%;
@@ -200,7 +201,7 @@ img.couple-photo {
     padding: 5px 5px;
     text-align: center;
     background-color: #FFF9F9; /* Màu nền nhẹ, có thể thay đổi */
-    min-height: 100vh;
+    min-height: auto;
 }
 .chamngon {
     color: #A93226; /* Màu đỏ đô cho tiêu đề */
