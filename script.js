@@ -171,6 +171,24 @@ function displayGuestName() {
 window.onload = function() {
     initSnow();
     displayGuestName(); // 🔥 GỌI HÀM HIỂN THỊ TÊN
+// 🔥 AUTO-PLAY LOGIC: Cố gắng phát nhạc tự động
+    audio.play()
+        .then(() => {
+            // Trường hợp 1: PHÁT THÀNH CÔNG
+            musicButton.innerHTML = '⏸️'; // Hiển thị PAUSE
+            isPlaying = true;
+        })
+        .catch(error => {
+            // Trường hợp 2: PHÁT THẤT BẠI (Do trình duyệt chặn)
+            if (error.name !== "AbortError") {
+                console.error("Lỗi phát nhạc:", error);
+                // Bạn có thể giữ lại alert nếu thấy cần thiết
+                // alert("Trình duyệt chặn tự động phát nhạc. Vui lòng bấm nút Play để kích hoạt.");
+            }
+            // Đặt lại trạng thái nút ban đầu nếu bị chặn
+            musicButton.innerHTML = '▶️'; // Hiển thị PLAY
+            isPlaying = false; // Nhạc chưa phát
+        });
     // Các logic khác có thể thêm vào đây
 };
 
