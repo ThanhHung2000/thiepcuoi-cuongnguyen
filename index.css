@@ -589,7 +589,7 @@ font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center; /* Căn chỉnh ảnh lên đầu theo chiều dọc */
-    gap: 15px; /* Khoảng cách giữa các ảnh */
+    gap: 5px; /* Khoảng cách giữa các ảnh */
     margin: 0 auto 40px auto;
     max-width: 800px; 
     padding: 0 10px;
@@ -625,24 +625,3 @@ font-size: 18px;
     max-width: 300px; 
 }
 
-/* --- Responsive: Xếp chồng ảnh trên mobile --- */
-@media (max-width: 600px) {
-    .photo-gallery-trio {
-        flex-direction: column; /* Chuyển sang xếp dọc */
-        align-items: center; /* Căn giữa */
-        gap: 30px; /* Khoảng cách lớn hơn giữa các ảnh khi xếp chồng */
-    }
-    
-    .photo-item,
-    .photo-item.photo-side,
-    .photo-item.photo-main {
-        flex: none; /* Loại bỏ tính toán flex */
-        width: 80%; /* Chiếm 80% chiều rộng màn hình */
-        max-width: 350px; 
-    }
-
-    /* Đảm bảo ảnh chính (main) nằm ở trên cùng khi xếp chồng */
-    .photo-item.photo-main {
-        order: -1; 
-    }
-}
