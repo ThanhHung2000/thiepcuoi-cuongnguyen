@@ -257,7 +257,99 @@ function initAlbumSlider() {
            updateMainImage(0); 
         }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. LẤY CÁC PHẦN TỬ HTML
+// Thay thế URL này bằng URL Web App thực tế của bạn
+    const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycby-HDPeNNazkfP2EHlwBWkzNUSUyzt_vGOJWmhpez29fE2ccbO7Ayvest7gXov1bASZnw/exec';
+    const rsvpModal = document.getElementById('rsvpModal');
+    const openRsvpBtn = document.getElementById('openRsvpModal');
+    const closeRsvpBtn = document.getElementById('closeRsvpModal');
+    const rsvpForm = document.getElementById('rsvpForm');
+    const guestNameDisplay = document.getElementById('ten-khach-moi-hien-thi');
+    
+    // Đảm bảo tất cả các phần tử đều tồn tại trước khi thêm sự kiện
+    if (!rsvpModal || !openRsvpBtn || !closeRsvpBtn || !rsvpForm) {
+        console.error("Thiếu ít nhất một phần tử DOM cần thiết (modal, button, form).");
+        return; 
+    }
 
+    // ----------------------------------------
+    // 2. CHỨC NĂNG MỞ/ĐÓNG MODAL
+    // ----------------------------------------
+
+    // Hàm mở modal (hiện form)
+    function openModal() {
+        rsvpModal.style.display = 'flex'; // Hiển thị modal
+        document.body.classList.add('modal-open'); // Tùy chọn: Dùng class để ngăn cuộn
+    }
+
+    // Hàm đóng modal (ẩn form)
+    function closeModal() {
+        rsvpModal.style.display = 'none'; // Ẩn modal
+        document.body.classList.remove('modal-open');
+    }
+
+    // Khi người dùng click vào nút MỞ
+    openRsvpBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+        openModal();
+    });
+
+    // Khi người dùng click vào dấu X (nút ĐÓNG)
+    closeRsvpBtn.addEventListener('click', function() {
+        closeModal();
+    });
+
+    // Khi người dùng click bất cứ đâu ngoài modal, đóng modal
+    window.addEventListener('click', function(event) {
+        if (event.target === rsvpModal) {
+            closeModal();
+        }
+    });
+
+    // ----------------------------------------
+    // 3. XỬ LÝ SỰ KIỆN GỬI FORM
+    // ----------------------------------------
+
+    rsvpForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Ngăn chặn tải lại trang mặc định
+        
+        const submitButton = rsvpForm.querySelector('.submit-button');
+        submitButton.disabled = true; // Vô hiệu hóa nút
+        submitButton.textContent = 'Đang Gửi...';
+
+        // Lấy dữ liệu từ form
+        const formData = new FormData(rsvpForm);
+        const urlEncodedData = new URLSearchParams(Object.fromEntries(formData.entries())).toString();
+
+        // Gửi dữ liệu bằng Fetch API đến Google Sheets
+        fetch(WEB_APP_URL, {
+            method: 'POST',
+            body: urlEncodedData,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.result === "success") {
+                alert('Cảm ơn bạn! Xác nhận tham dự và lời chúc đã được gửi thành công.');
+                closeModal(); // Đóng modal
+                rsvpForm.reset(); // Xóa dữ liệu đã nhập
+            } else {
+                alert('Lỗi khi gửi RSVP. Vui lòng thử lại sau.');
+            }
+        })
+        .catch(error => {
+            console.error('Lỗi kết nối:', error);
+            alert('Có lỗi xảy ra, không thể gửi dữ liệu. Vui lòng kiểm tra kết nối.');
+        })
+        .finally(() => {
+            submitButton.disabled = false;
+            submitButton.textContent = 'GỬI NGAY';
+        });
+    });
+});
 
 
 // =======================================================

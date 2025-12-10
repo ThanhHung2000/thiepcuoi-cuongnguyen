@@ -43,6 +43,7 @@
                     </div>
                     <p class="lunisolar-note">(Tức Ngày 16 Tháng 11 Năm Ất Tỵ)</p>
 
+
               </div>
 
               <div class="section-page page-bride">
@@ -180,9 +181,51 @@
                         </div>
 
                         <p class="lunisolar-detailed">(Tức Ngày 16 Tháng 11 Năm Ất Tỵ)</p>
-                        
-                        <a href="#rsvp-section" class="btn-rsvp-small">XÁC NHẬN THAM DỰ</a>
-                        
+
+                                    <a href="#" class="btn-rsvp-small" id="openRsvpModal">XÁC NHẬN THAM DỰ</a>
+
+                                    <div id="rsvpModal" class="modal-overlay">
+                                        <div class="modal-content">
+                                            
+                                            <span class="close-btn" id="closeRsvpModal">&times;</span>
+                                            
+                                            <h2 class="form-title">XÁC NHẬN THAM DỰ</h2>
+                                            
+                                            <form action="/submit-rsvp" method="POST" id="rsvpForm"> 
+                                                
+                                                <div class="form-group">
+                                                    <input 
+                                                        type="text" 
+                                                        name="guestName" 
+                                                        placeholder="Tên của bạn?" 
+                                                        required
+                                                    >
+                                                </div>
+                                                
+                                                <div class="form-group">
+                                                    <input 
+                                                        type="text" 
+                                                        name="relationship" 
+                                                        placeholder="Bạn là gì của Dâu Rể nhỉ?" 
+                                                        required
+                                                    >
+                                                </div>
+                                                
+                                                <div class="form-group">
+                                                    <textarea 
+                                                        name="wishes" 
+                                                        placeholder="Gửi lời chúc đến Dâu Rể nhé!" 
+                                                        rows="3"
+                                                    ></textarea>
+                                                </div>
+                                                
+                                                <button type="submit" class="submit-button">
+                                                    GỬI NGAY
+                                                </button>
+
+                                            </form>
+                                        </div>
+                                    </div>
                         <p class="save-the-date-note">SAVE THE DATE <br> THÁNG 01 - 2026</p>
 
                         <div class="calendar-grid">

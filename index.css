@@ -1060,3 +1060,98 @@ font-size: 18px;
         height: 60px;
     }
 }
+
+
+/* -------------------- Giao diện Modal -------------------- */
+.modal-overlay {
+    display: none; /* THAY ĐỔI QUAN TRỌNG: Ẩn modal theo mặc định */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center; /* Đảm bảo nội dung nằm giữa */
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #f0f4ff; /* Màu nền xanh nhạt của form */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; 
+    max-width: 400px; /* Chiều rộng tối đa */
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* -------------------- Các thành phần Form -------------------- */
+.form-title {
+    text-align: center;
+    color: #1a4f8a; 
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Quan trọng */
+    border-radius: 4px;
+    font-size: 16px;
+    
+    /* Tạo border xanh đậm khi được focus */
+    border-top: 1px solid #1a4f8a; 
+    border-bottom: 1px solid #1a4f8a; 
+}
+
+/* -------------------- Nút Đóng (X) -------------------- */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* -------------------- Nút Gửi -------------------- */
+.submit-button {
+    background-color: #ccc; /* Màu xám */
+    color: #333; /* Chữ màu đậm */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    margin: 20px 10% 0 10%; /* Căn giữa nút */
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #b0b0b0;
+}
