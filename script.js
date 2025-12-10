@@ -265,8 +265,8 @@ function initAlbumSlider() {
 // =======================================================
 
 window.onload = function() {
+    displayGuestName(); // 🔥 GỌI HÀM HIỂN THỊ TÊN   
     initSnow();
-    displayGuestName(); // 🔥 GỌI HÀM HIỂN THỊ TÊN
 // 🔥 AUTO-PLAY LOGIC: Cố gắng phát nhạc tự động
     initAlbumSlider(); // 🔥 GỌI HÀM KHỞI TẠO ALBUM SLIDER TẠI ĐÂY
     // Các logic khác có thể thêm vào đây

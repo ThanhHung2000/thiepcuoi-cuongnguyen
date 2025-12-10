@@ -189,7 +189,7 @@ img.couple-photo {
 
 /* --- Thiết lập chung cho một trang mới --- */
 .section-page {
-    padding: 5px 5px;
+    padding: 5px 0px;
     text-align: center;
     background-color: #FFF9F9; /* Màu nền nhẹ, có thể thay đổi */
     min-height: auto;
@@ -525,10 +525,10 @@ font-size: 18px;
 }
 /* --- Đường kẻ ngăn cách --- */
 .khachmoi {
-    border: 0;
-    height: 2px;
+    border: 1;
+    height: 3px;
     background: #c8d3ff;
-    margin: 20px auto;
+    margin: 10px auto;
     width: 50%;
 }
 #ten-khach-moi-hien-thi {
