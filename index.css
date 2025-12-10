@@ -523,15 +523,20 @@ font-size: 18px;
     margin: 5px 0 0 0;
     padding: 0px;
 }
-
+/* --- Đường kẻ ngăn cách --- */
+.khachmoi {
+    border: 0;
+    height: 2px;
+    background: #c8d3ff;
+    margin: 20px auto;
+    width: 50%;
+}
 #ten-khach-moi-hien-thi {
-    color: #4A4A4A; 
     font-size: 1.2em;
     margin: 20px 0 30px 0; 
     line-height: 1.4;
 }
 #ten-khach-moi-hien-thi span {
-    color: #003366; 
     font-size: 1.4em; 
     font-weight: bold;
     display: block; 
