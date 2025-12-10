@@ -261,6 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 1. LẤY CÁC PHẦN TỬ HTML
 // Thay thế URL này bằng URL Web App thực tế của bạn
     const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycby-HDPeNNazkfP2EHlwBWkzNUSUyzt_vGOJWmhpez29fE2ccbO7Ayvest7gXov1bASZnw/exec';
+    
     const rsvpModal = document.getElementById('rsvpModal');
     const openRsvpBtn = document.getElementById('openRsvpModal');
     const closeRsvpBtn = document.getElementById('closeRsvpModal');
