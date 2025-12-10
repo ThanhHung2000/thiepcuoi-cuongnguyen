@@ -260,7 +260,7 @@ function initAlbumSlider() {
 document.addEventListener('DOMContentLoaded', function() {
     // 1. LẤY CÁC PHẦN TỬ HTML
 // Thay thế URL này bằng URL Web App thực tế của bạn
-    const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbywbeSALPO2PY4X67v34ADNri_k_sJ355GltiUIoJ2_ZrqpIN4V5767RyEsHnknyq1WgQ/exec';
+    const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbyHTJwKilZUMo_QUFMDHvvbCaEOLITF0nlhCX9G9Fdhdl6GeEH84qs44ZFt_5gz-sIK9Q/exec';
     //const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwiCIrWSmLXyv8jaMoSJIrK2mRqmpNsijPtKNPvLCQkSLlG27lakZBF4qYbZIyhIo8aVQ/exec';
     
     const rsvpModal = document.getElementById('rsvpModal');
