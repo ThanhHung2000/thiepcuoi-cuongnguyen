@@ -1,7 +1,7 @@
 body {
     font-family: 'Times New Roman', serif;
     background-color: #cfccd6; /* Màu nền kem nhạt */
-    color: #f35b7a;
+    color: #003366;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,16 +25,7 @@ body {
     /* 🔥 KHẮC PHỤC: Thêm màu nền cho card */
     background-color: #FFFFFF; /* Màu trắng để tách khỏi nền tím body */
 }
-/* ÁP DỤNG MEDIA QUERY CHO MÀN HÌNH NHỎ (điện thoại) */
-
-.greeting {
-    font-size: 1.1em;
-    margin-bottom: 5px;
-    color: #8b0000;
-}
-
 h1 {
-    color: #8b0000; /* Màu đỏ đậm */
     /* font-family: 'Great Vibes', sans-serif; */
     font-size: 2em;
     margin-top: 10px;
@@ -47,7 +38,7 @@ h2 {
     margin-bottom: 5px;
 }
 #ten-khach-moi {
-    color: #000000; 
+    color: #6b74c9; 
     font-size: 1.6em;
     font-weight: bold;
     margin: 15px 0;
@@ -205,7 +196,7 @@ img.couple-photo {
 }
 .chamngon {
     color: #A93226; /* Màu đỏ đô cho tiêu đề */
-    font-size: 18px;
+    font-size: 20px;
     /* Xóa margin trên */
     margin-top: 0;
     margin-bottom: 5px;
@@ -268,24 +259,12 @@ img.couple-photo {
     padding: 8px 0px; /* GIẢM PADDING XUỐNG CÒN 8px trên dưới, 10px hai bên */
     
     /* Màu chữ và định dạng chữ đã được GIẢM kích thước */
-    color: #A93226; /* Màu đỏ đô */
     text-align: center; 
     font-size: 12px; /* Tăng nhẹ lại lên 12px để dễ đọc hơn */
     line-height: 1.2; /* Tăng nhẹ lại để chữ không dính sát nhau */
     font-weight: bold;
 }
 
-.bride-message p {
-/* Đảm bảo không có khoảng cách thừa nào gây lệch */
-    padding: 0;
-    margin: 0.3em 0; /* Chỉ giữ margin trên/dưới để tách các đoạn */
-    
-    color: #A93226; 
-    font-weight: bold; 
-    
-    /* Đảm bảo nội dung chữ bên trong P cũng được căn giữa */
-    text-align: center;
-}
 
 
 /* --- Định dạng phần Header --- */
@@ -383,31 +362,18 @@ img.couple-photo {
     left: 0;
     right: 0;
     width: 100%;
-    
     /* Thiết lập nền mờ và padding đã được GIẢM */
     background: rgba(255, 255, 255, 0.2); 
     backdrop-filter: blur(2px); 
-    padding: 8px 0px; /* GIẢM PADDING XUỐNG CÒN 8px trên dưới, 10px hai bên */
-    
+    padding: 0px 0px; /* GIẢM PADDING XUỐNG CÒN 8px trên dưới, 10px hai bên */
     /* Màu chữ và định dạng chữ đã được GIẢM kích thước */
-    color: #A93226; /* Màu đỏ đô */
     text-align: center; 
     font-size: 12px; /* Tăng nhẹ lại lên 12px để dễ đọc hơn */
     line-height: 1.2; /* Tăng nhẹ lại để chữ không dính sát nhau */
     font-weight: bold;
 }
 
-.bride-message2 p {
-/* Đảm bảo không có khoảng cách thừa nào gây lệch */
-    padding: 0;
-    margin: 0.3em 0; /* Chỉ giữ margin trên/dưới để tách các đoạn */
-    
-    color: #A93226; 
-    font-weight: bold; 
-    
-    /* Đảm bảo nội dung chữ bên trong P cũng được căn giữa */
-    text-align: center;
-}
+
 h6
 {
 font-size: 18px;
@@ -487,7 +453,7 @@ font-size: 18px;
 
 .block-info p {
     color: #003366; 
-    font-size: 15px;
+    font-size: 18px;
     margin: 0;
     line-height: 1.2;
     text-align: center; 
@@ -495,7 +461,6 @@ font-size: 18px;
 }
 
 .title-couple {
-    color: #A93226; 
     font-size: 20px;
     margin-top: 15px;
     margin-bottom: 3px;
@@ -522,7 +487,6 @@ font-size: 18px;
 .baotin {
     text-align: center;
     font-family: 'Times New Roman', Times, serif; 
-    color: #4A4A4A; /* Màu chữ */
     
     /* 1. NỀN VÀ KHUNG HIỂN THỊ (Sử dụng !important để ưu tiên tuyệt đối) */
     background-color: #FFFf !important; /* Màu nền KEM NHẠT */
@@ -539,7 +503,6 @@ font-size: 18px;
 
 /* --- TIÊU ĐỀ LỚN: LỄ THÀNH HÔN --- */
 .baotin .chude {
-    color: #A93226; /* Màu đỏ đậm */
     text-transform: uppercase;
     font-size: 1.8em; 
     font-weight: bold;
@@ -554,8 +517,7 @@ font-size: 18px;
 
 /* --- ĐOẠN VĂN BẢN TRÂN TRỌNG BÁO TIN --- */
 .baotin p {
-    color: #4A4A4A; /* Màu xám đậm */
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: 300; 
     line-height: 1.6;
     margin: 5px 0 0 0;
@@ -575,14 +537,6 @@ font-size: 18px;
     display: block; 
 }
 
-/* --- Thiết lập chung cho phần Gallery --- */
-.gallery-title {
-    color: #A93226; 
-    font-size: 24px;
-    margin: 40px 0 15px 0; /* Khoảng cách trên và dưới tiêu đề */
-    text-align: center;
-    font-weight: bold;
-}
 
 /* --- Container cho 3 ảnh (Sử dụng Flexbox) --- */
 .photo-gallery-trio {
@@ -778,8 +732,7 @@ font-size: 18px;
 
 /* --- Chú thích SAVE THE DATE --- */
 .save-the-date-note {
-    font-size: 0.8em;
-    color: #A93226;
+    font-size: 1em;
     margin: 30px 0 20px 0;
 }
 
@@ -884,7 +837,6 @@ font-size: 18px;
     font-family: 'Times New Roman', cursive; /* Font chữ nghiêng, thư pháp */
     font-size: 2em;
     font-style: italic;
-    color: #A93226; /* Màu đỏ đô */
     margin-bottom: 30px;
 }
 
@@ -950,35 +902,13 @@ font-size: 18px;
     width: 80%;
 }
 
-/* --- Responsive cho điện thoại --- */
-@media (max-width: 600px) {
-    .location-block {
-        flex-direction: column; /* Xếp chồng (details trên, nút dưới) */
-        align-items: center;
-        text-align: center;
-    }
-    .location-details {
-        margin-bottom: 10px;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-    }
-    .location-text {
-        text-align: left; /* Giữ chữ vẫn căn trái */
-    }
-    .location-icon {
-        display: none; /* Ẩn icon trên mobile để tiết kiệm không gian */
-    }
-    .location-container {
-        padding: 30px 20px;
-    }
-}
+
 
 
 /* --- Thiết lập chung cho Trang Album Ảnh --- */
 .section-page.page-photo-album {
     background-color: #FFF9F9;
-    padding: 60px 10px; /* Giảm padding ngang để ảnh sát hơn */
+    padding: 0px 10px; /* Giảm padding ngang để ảnh sát hơn */
 }
 
 /* --- Tiêu đề Album --- */
@@ -986,22 +916,10 @@ font-size: 18px;
     font-family: 'Times New Roman', cursive;
     font-size: 2.5em;
     font-style: italic;
-    color: #003366;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     padding-bottom: 5px;
     position: relative;
-}
-
-/* Thêm đường kẻ dưới tiêu đề */
-.album-title-header::after {
-    content: "♥️"; /* Biểu tượng trái tim */
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.2em;
-    color: #A93226;
 }
 
 /* --- Khối Grid Container cho Album --- */
@@ -1146,4 +1064,3 @@ font-size: 18px;
         height: 60px;
     }
 }
-
