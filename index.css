@@ -1,6 +1,6 @@
 body {
     font-family: 'Times New Roman', serif;
-    background-color: #cfccd6; /* Màu nền kem nhạt */
+    background-color: #FFF9F9; /* Màu nền kem nhạt */
     color: #003366;
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@ body {
 h1 {
     /* font-family: 'Great Vibes', sans-serif; */
     font-size: 2em;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 5px;
 }
 h2 {
@@ -45,12 +45,6 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
-.announcement {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
 
 .btn-rsvp {
     display: inline-block;
@@ -143,9 +137,6 @@ img.couple-photo {
     /* 1. Đặt đường dẫn ảnh nền BẰNG URL TRỰC TIẾP */
     background-image: url('https://thanhhung2000.github.io/thiepcuoi-cuongnguyen/images/anhnen2.jpg'); 
     
-    /* 2. Đặt kích thước cho trang đầu */
-    /* Quan trọng: Đảm bảo chiều cao tối thiểu bằng chiều cao màn hình để ảnh phủ kín */
-    //min-height: 100dvh;
     min-height: auto;
     /* 1. THÊM GIỚI HẠN CHIỀU RỘNG TỐI ĐA */
     /* max-width: 600px;
@@ -189,7 +180,7 @@ img.couple-photo {
 
 /* --- Thiết lập chung cho một trang mới --- */
 .section-page {
-    padding: 5px 0px;
+    padding: 0px 0px;
     text-align: center;
     background-color: #FFF9F9; /* Màu nền nhẹ, có thể thay đổi */
     min-height: auto;
