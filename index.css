@@ -1,6 +1,6 @@
 body {
     font-family: 'Times New Roman', sans-serif;
-    background-color: #FFF9F9; /* Màu nền kem nhạt */
+    background-color: hsl(0, 100%, 99%); /* Màu nền kem nhạt */
     color: #A93226; /* Màu đỏ đô cho tiêu đề */
     display: flex;
     justify-content: center;
@@ -18,12 +18,12 @@ body {
     text-align: center;
     max-width: 500px;
     width: 100%;
-    border: 3px solid #ce9999;
+    border: 3px solid rgb(245, 231, 231);
     position: relative;
     overflow: hidden;
     
     /* 🔥 KHẮC PHỤC: Thêm màu nền cho card */
-    background-color: #FFFFFF; /* Màu trắng để tách khỏi nền tím body */
+    background-color: #f7f0f0; /* Màu trắng để tách khỏi nền tím body */
 }
 h1 {
     font-size: 1.8em;
@@ -1268,6 +1268,7 @@ input[type="text"], textarea {
     
     max-width: 600px;
     width: 100%;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
 
