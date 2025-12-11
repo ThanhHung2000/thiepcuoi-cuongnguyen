@@ -14,7 +14,24 @@
     <meta property="og:description" content="Thư mời cưới Tống Cường & Lê Nguyên">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="index.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
 </head>
+<script>
+    function toggleQRCode() {
+        var qrContainer = document.getElementById('qrCodeContainer');
+        var button = document.querySelector('.qr-code-button');
+
+        if (qrContainer.classList.contains('hidden')) {
+            // Hiển thị mã QR và ẩn nút
+            qrContainer.classList.remove('hidden');
+            button.classList.add('hidden');
+        } else {
+            // Ẩn mã QR và hiện nút
+            qrContainer.classList.add('hidden');
+            button.classList.remove('hidden');
+        }
+    }
+</script>
 <body>
         <div class="card">
               <div class="trangdau">
@@ -163,7 +180,7 @@
                                     <div id="rsvpModal" class="modal-overlay">
                                         <div class="modal-content">
                                             
-                                            <span class="close-btn" id="closeRsvpModal">&times;</span>
+                                            <span class="close-btn" id="closeRsvpModal">×</span>
                                             
                                             <h2 class="form-title">XÁC NHẬN THAM DỰ</h2>
                                             
@@ -303,6 +320,31 @@
                     </div>
 
 
+                </div>
+                <div class="hop-mung-cuoi">
+                    <div class="overlay"></div> 
+                    
+                    <div class="content-wrapper">
+                        <p id="tieude-hop">Hộp Mừng Cưới</p>
+                        <p id="loimoi-hop">Thật vui vì được gặp và đón tiếp quý khách thân yêu</p>
+                        
+                        <button class="qr-code-button" onclick="toggleQRCode()">
+                            QR CODE
+                            <i class="fas fa-cube"></i> 
+                        </button>
+                        
+                        <div id="qrCodeContainer" class="qr-code-popup hidden">
+                            <span class="close-qr-btn" onclick="toggleQRCode()">×</span> <img src="https://thanhhung2000.github.io/thiepcuoi-cuongnguyen/images/qr.jpg" alt="Mã QR Mừng Cưới" class="qr-image">
+                            <p class="qr-instruction">Quét mã QR để gửi lời chúc</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trangcuoi">
+                    <div class = "text-wrapper">
+                      <p id="tieude-cuoi"> Thank you</p>
+                      <p id="tieude-loimoi">Rất hân hạnh được đón tiếp ! </p>
+                    </div>
+                  
                 </div>
                    
            </div>                        

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Times New Roman', serif;
+    font-family: 'Times New Roman', sans-serif;
     background-color: #FFF9F9; /* Màu nền kem nhạt */
     color: #A93226; /* Màu đỏ đô cho tiêu đề */
     display: flex;
@@ -16,7 +16,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
-    max-width: 600px;
+    max-width: 500px;
     width: 100%;
     border: 3px solid #ce9999;
     position: relative;
@@ -92,7 +92,7 @@ h2 {
 .trangdau {
     background-image: url('https://thanhhung2000.github.io/thiepcuoi-cuongnguyen/images/anhdoi1.jpg');    
     
-    max-width: 600px;
+    max-width: 500px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -538,7 +538,7 @@ font-size: 18px;
     background-color: #cfccd6 !important; /* Màu xanh/tím nhạt */
     border: 1px solid #cfccd6; /* Viền xanh nhạt */
     border-radius: 10px; /* Bo tròn góc */
-    max-width: 400px; 
+    max-width: 300px; 
     /* Điều chỉnh font-color cho toàn bộ khối này */
     color: #003366; /* Màu xanh đậm cho chữ chung */
     padding: 10px 10px; /* Tăng padding để rộng hơn */
@@ -548,7 +548,7 @@ font-size: 18px;
 }
 
 /* --- Định dạng Tiêu đề LỄ CƯỚI --- */
-..tieccuoi-ceremon .chude2,
+.tieccuoi-ceremon .chude2,
 .tieccuoi-ceremon .chude1,
 .church-ceremony-box .chude {
     color: #003366; /* Màu xanh đậm */
@@ -1108,4 +1108,220 @@ input[type="text"], textarea {
 
 .submit-button:hover {
     background-color: #b0b0b0;
+}
+
+
+.hop-mung-cuoi {
+    background-image: url('https://thanhhung2000.github.io/thiepcuoi-cuongnguyen/images/album9.jpg'); 
+    background-size: cover;
+    background-position: center center; /* Căn giữa hoàn toàn */
+    background-repeat: no-repeat;
+    
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    
+    /* 🔥 KHẮC PHỤC QUAN TRỌNG: Thiết lập chiều cao cứng */
+    min-height: 400px; /* Đặt chiều cao tối thiểu để có không gian */
+    height: 70vh; /* Hoặc dùng vh để nó chiếm 70% chiều cao màn hình */
+    
+    position: relative; 
+    flex-direction: column; 
+    
+    /* Dùng Flexbox để căn nội dung chính xác */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+/* KHÔNG CẦN thay đổi các lớp .overlay, .content-wrapper và #tieude-hop */
+/* Lớp phủ mờ màu đỏ/nâu (giúp chữ nổi bật) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.content-wrapper {
+
+    z-index: 2; /* Đặt nội dung lên trên lớp overlay */
+    width: 90%;
+    text-align: center;
+    color: white; /* Màu chữ trắng */
+}
+
+/* -------------------------------------- */
+/* STYLE CHO CHỮ */
+/* -------------------------------------- */
+#tieude-hop {
+    font-family: 'Great Vibes', cursive; /* Font chữ nghệ thuật */
+    font-size: 55px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative; /* hoặc position:static; nếu cha đã có z-index */
+    z-index: 3;
+}
+
+#loimoi-hop {
+    font-family: Arial, sans-serif; /* Font chữ dễ đọc */
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* -------------------------------------- */
+/* STYLE CHO NÚT VÀ QR CODE */
+/* -------------------------------------- */
+.qr-code-button {
+    font-family: Arial, sans-serif;
+    background-color: rgba(100, 120, 180, 0.85); /* Màu xanh tím mờ */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.qr-code-button:hover {
+    background-color: rgba(100, 120, 180, 1);
+}
+
+.qr-code-popup {
+    /* Căn giữa mã QR code */
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10; /* Đảm bảo QR code hiển thị trên mọi thứ */
+    text-align: center;
+}
+
+.qr-image {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.qr-instruction {
+    color: #333;
+    font-size: 14px;
+}
+
+/* Class để ẩn/hiện */
+.hidden {
+    display: none;
+}
+/* Trong file style.css */
+
+.close-qr-btn {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #333;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+    padding: 0 5px;
+
+    z-index: 1001; /* Đảm bảo nút đóng nằm trên cùng */
+
+}
+
+
+
+.close-qr-btn:hover {
+
+    color: red;
+
+}
+
+
+.trangcuoi {
+    background-image: url('https://thanhhung2000.github.io/thiepcuoi-cuongnguyen/images/album11.jpg');    
+    
+    max-width: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 0; 
+    padding-top: 0;
+    padding-bottom: 150%; 
+    position: relative; /* Rất quan trọng */   
+    
+/* 2. Cấu hình ảnh nền */
+    background-size: cover; /* Dùng cover để ảnh lấp đầy khung 2:3 */
+    background-position: center top; /* Căn trên để giữ phần đầu */
+    background-repeat: no-repeat;
+    /* justify-content: center; */
+}
+
+.text-wrapper {
+    font-family: 'Great Vibes', sans-serif;
+    position: absolute; 
+    font-size: 40px;
+    
+    /* -------------------------------------- */
+    /* 1. HIỆU ỨNG HỘP CHỮ NHẬT BO TRÒN */
+    /* -------------------------------------- */
+    
+    /* Đảm bảo chiều rộng chỉ vừa đủ với nội dung để hộp không tràn ra ngoài */
+    /* Nếu muốn căn giữa hoàn hảo, nên dùng width: fit-content; hoặc xóa width: 100%; */
+    width: 85%; 
+    
+    padding: 15px 30px; /* Thêm đệm bên trong hộp */
+    background-color: rgba(255, 255, 255, 0.85); /* Nền màu trắng hơi trong suốt (85% opacity) */
+    color: #333333; /* Màu chữ tối để nổi bật trên nền trắng */
+    
+    border: 2px solid #a87f59; /* Viền mỏng, màu nâu/vàng nhẹ nhàng (tùy chọn) */
+    border-radius: 15px; /* Bo tròn các góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ nhẹ để làm nổi bật */
+    
+    /* text-align: center; (Không cần thiết nếu width là fit-content, nhưng có thể giữ nếu dùng width: 100%) */
+    
+    /* -------------------------------------- */
+    /* 2. CĂN CHỈNH VỊ TRÍ (Thấp hơn một chút) */
+    /* -------------------------------------- */
+    
+    /* Căn chỉnh theo tâm của .trangcuoi */
+    top: 60%; /* Đặt điểm bắt đầu của hộp tại 70% từ trên xuống (Thấp hơn tâm) */
+    left: 60%; /* Đặt điểm bắt đầu của hộp tại 50% từ trái qua */
+    
+    /* Dịch chuyển ngược lại 50% chiều rộng của chính nó để căn giữa theo chiều ngang */
+    /* Không dịch chuyển ngược lại 70% chiều cao nữa, vì đã dùng top: 70% để đặt vị trí. */
+    transform: translateX(-60%); 
+}
+
+/* Căn chỉnh lại các đoạn text bên trong hộp */
+#tieude-cuoi, #tieude-loimoi {
+    /* Đảm bảo các đoạn P được căn giữa bên trong hộp chữ nhật */
+    text-align: center;
+    margin: 0; /* Xóa margin mặc định của thẻ P */
 }
