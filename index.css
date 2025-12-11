@@ -1,7 +1,7 @@
 body {
     font-family: 'Times New Roman', serif;
     background-color: #FFF9F9; /* Màu nền kem nhạt */
-    color: #003366;
+    color: #A93226; /* Màu đỏ đô cho tiêu đề */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,15 +26,14 @@ body {
     background-color: #FFFFFF; /* Màu trắng để tách khỏi nền tím body */
 }
 h1 {
-    /* font-family: 'Great Vibes', sans-serif; */
-    font-size: 2em;
-    margin-top: 15px;
+    font-size: 1.8em;
+    margin-top: 10px;
     margin-bottom: 5px;
 }
 h2 {
     /* font-family: 'Great Vibes', sans-serif; */
     font-size: 1.8em;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 5px;
 }
 #ten-khach-moi {
@@ -61,34 +60,6 @@ h2 {
 .btn-rsvp:hover {
     background-color: #b88a64;
 }
-/* Sử dụng lớp mà bạn đã gán cho thẻ <img>: class="couple-photo" */
-img.couple-photo {
-    /* Đảm bảo chiều rộng ảnh được giới hạn */
-    max-width: 290px !important; 
-    width: 100% !important; 
-    height: auto !important; 
-    /* Kiểm tra màu (Ví dụ: đặt màu viền để xem CSS có được áp dụng không) */
-    border: 5px solid #ccccff !important; /* Đặt tạm thời để kiểm tra */
-    
-    /* ... các quy tắc khác ... */
-}
-/* Trong file style.css */
-
-/* 1. Căn chỉnh 3 cột chính cạnh nhau */
-.date-time-container {
-    display: flex; /* Bật chế độ Flexbox */
-    justify-content: center; /* Căn giữa các cột */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    margin: 30px 0; /* Khoảng cách trên dưới */
-    color: #003366; /* Màu xanh đậm cho toàn bộ khu vực ngày tháng */
-}
-
-/* 2. Định dạng cột Ngày/Tháng (Phần chính giữa) */
-.col-date-main {
-    border-left: 2px solid #003366; /* Kẻ dọc bên trái */
-    border-right: 2px solid #003366; /* Kẻ dọc bên phải */
-    padding: 0 15px; /* Khoảng cách giữa các đường kẻ */
-}
 
 .date-number {
     font-size: 3em; /* Kích thước số lớn (26.10) */
@@ -97,11 +68,7 @@ img.couple-photo {
     line-height: 1; /* Loại bỏ khoảng cách thừa */
 }
 
-/* 3. Định dạng cột Thời gian/Thứ */
-.col-time-day {
-    text-align: right;
-    padding-right: 15px;
-}
+
 .time, .day-of-week {
     display: block;
 }
@@ -113,46 +80,38 @@ img.couple-photo {
     font-size: 1.1em;
 }
 
-/* 4. Định dạng cột Năm */
-.col-year {
-    text-align: left;
-    padding-left: 15px;
-    font-weight: bold;
-    font-size: 1.8em;
-}
+
 .year-top, .year-bottom {
     display: block;
     line-height: 1;
 }
 
-/* 5. Định dạng chú thích ngày âm lịch */
-.lunisolar-note {
-    font-style: italic;
-    font-size: 0.9em;
-    margin-top: -15px; /* Kéo lên gần khu vực ngày tháng */
-}
+
 /* Trong file style.css */
 
 .trangdau {
-    /* 1. Đặt đường dẫn ảnh nền BẰNG URL TRỰC TIẾP */
-    background-image: url('https://thanhhung2000.github.io/thiepcuoi-cuongnguyen/images/anhnen2.jpg'); 
+    background-image: url('https://thanhhung2000.github.io/thiepcuoi-cuongnguyen/images/anhdoi1.jpg');    
     
-    min-height: auto;
-    /* 1. THÊM GIỚI HẠN CHIỀU RỘNG TỐI ĐA */
-    /* max-width: 600px;
+    max-width: 600px;
     width: 100%;
     margin-left: auto;
-    margin-right: auto; */
-    /* 3. Cấu hình hiển thị ảnh nền */
-    background-size: cover;      /* Đảm bảo toàn bộ ảnh hiển thị. Có thể để lại khoảng trắng nếu tỷ lệ khác */
-    background-repeat: no-repeat;  /* Rất quan trọng khi dùng contain để ảnh không bị lặp */
-    /* background-position: center center; */
+    margin-right: auto;
     
-/* ... (Các thuộc tính Flexbox khác) ... */
+    /* ❌ SỬA: Đổi từ 'cover' sang 'contain' */
+    background-size: contain;        
+    
+    /* ✅ THÊM: Căn giữa ảnh nền trong khung */
+    background-position: center top;
+    
+    background-repeat: no-repeat;
+    
+    /* Giữ chiều cao tối thiểu để đảm bảo khung chứa nội dung vẫn đủ lớn */
+    min-height: 900px; 
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     text-align: center;
     padding: 0px;
 }
@@ -424,6 +383,7 @@ font-size: 18px;
 .block-info {
     flex: 1; /* Chiếm phần còn lại */
     padding: 0;
+    justify-content: center;
 }
 
 /* Căn chữ bên trong khối */
