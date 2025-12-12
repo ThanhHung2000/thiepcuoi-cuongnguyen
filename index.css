@@ -1,7 +1,7 @@
 body {
     font-family: 'Times New Roman', sans-serif;
-    background-color: hsl(0, 100%, 99%); /* Màu nền kem nhạt */
-    color: #A93226; /* Màu đỏ đô cho tiêu đề */
+    background-color: #f7f0f0; /* Màu nền kem nhạt */
+    color: #1A2954; /* Màu đỏ đô cho tiêu đề */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,7 @@ h1 {
     margin-bottom: 5px;
 }
 h2 {
-    /* font-family: 'Great Vibes', sans-serif; */
+    font-family: 'Great Vibes', sans-serif;
     font-size: 1.8em;
     margin-top: 0px;
     margin-bottom: 5px;
@@ -139,7 +139,7 @@ h2 {
     min-height: auto;
 }
 .chamngon {
-    color: #A93226; /* Màu đỏ đô cho tiêu đề */
+    color: #1A2954; /* Màu đỏ đô cho tiêu đề */
     font-size: 20px;
     /* Xóa margin trên */
     margin-top: 0;
@@ -390,14 +390,14 @@ font-size: 18px;
 
 /* --- Định dạng Chữ --- */
 .title-family {
-    color: #003366; 
+    color: #1A2954; 
     font-size: 18px;
     margin-bottom: 5px;
     text-align: center; 
 }
 
-.block-info p {
-    color: #003366; 
+.name-parent {
+    color: #1A2954; 
     font-size: 18px;
     margin: 0;
     line-height: 1.2;
@@ -406,17 +406,18 @@ font-size: 18px;
 }
 
 .title-couple {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 15px;
     margin-bottom: 3px;
     text-align: center; 
 }
 
 .name-couple {
-    font-family: 'Times New Roman', cursive; /* Hoặc font thư pháp */
-    font-size: 36px;
-    color: #A93226;
+    font-family: 'Great Vibes', cursive; /* Hoặc font thư pháp */
+    font-size: 20px;
+    color: #1A2954;
     margin-top: 0;
+    text-align: center; 
 }
 
 
@@ -471,10 +472,14 @@ font-size: 18px;
 /* --- Đường kẻ ngăn cách --- */
 .khachmoi {
     border: 1;
-    height: 3px;
+    height: 1px;
     background: #c8d3ff;
     margin: 10px auto;
     width: 50%;
+}
+.page-photo-gallery
+{
+  padding: 20px 10px;
 }
 #ten-khach-moi-hien-thi {
     font-size: 1.2em;
@@ -535,7 +540,7 @@ font-size: 18px;
 .tieccuoi-ceremon,
 .church-ceremony-box {
     /* Ghi đè màu nền và viền để khớp với ảnh bạn gửi */
-    background-color: #cfccd6 !important; /* Màu xanh/tím nhạt */
+    background-color: #c8d3ff !important; /* Màu xanh/tím nhạt */
     border: 1px solid #cfccd6; /* Viền xanh nhạt */
     border-radius: 10px; /* Bo tròn góc */
     max-width: 300px; 
@@ -590,10 +595,17 @@ font-size: 18px;
     color: #4A4A4A;
     margin: 0;
 }
+.gachke {
+    border: 1;
+    height: 1px;
+    background: #c8d3ff;
+    margin: 5px auto;
+    width: 50%;
+}
 /* --- Thiết lập chung cho Trang Ngày Lịch Chi Tiết --- */
 .section-page.page-detailed-date {
     background-color: #FFFFFF; /* Nền trắng */
-    padding: 40px 20px;
+    padding: 20px 20px;
     min-height: auto; /* Không cần min-height 100vh */
 }
 
