@@ -139,7 +139,7 @@ h2 {
     min-height: auto;
 }
 .chamngon {
-    color: #1A2954; /* Màu đỏ đô cho tiêu đề */
+    color: #1A2954; 
     font-size: 20px;
     /* Xóa margin trên */
     margin-top: 0;
@@ -927,10 +927,9 @@ font-size: 18px;
 /* --- Khối Slider Ảnh Lớn (Ảnh 7-26) --- */
 .main-photo-slider {
     position: relative;
-    max-width: 600px;
-    width: 95%; /* Chiếm gần hết chiều rộng card */
+    max-width: 500px;
+    width: 100%; /* Chiếm gần hết chiều rộng card */
     margin: 0 auto;
-    height: 500px; /* Chiều cao cố định cho ảnh lớn */
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -938,7 +937,7 @@ font-size: 18px;
 }
 
 .main-photo-slider img {
-    width: 100%;
+    width: 95%;
     height: 100%;
     object-fit: cover; /* Đảm bảo ảnh lấp đầy khung */
     transition: opacity 0.3s ease-in-out; /* Hiệu ứng chuyển ảnh */
