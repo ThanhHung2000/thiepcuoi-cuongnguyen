@@ -1,6 +1,6 @@
 body {
     font-family: 'Times New Roman', sans-serif;
-    background-color: #f7f0f0; /* Màu nền kem nhạt */
+    background-color: #FFFFFF; /* Màu nền kem nhạt */
     color: #1A2954; /* Màu đỏ đô cho tiêu đề */
     display: flex;
     justify-content: center;
@@ -23,7 +23,7 @@ body {
     overflow: hidden;
     
     /* 🔥 KHẮC PHỤC: Thêm màu nền cho card */
-    background-color: #f7f0f0; /* Màu trắng để tách khỏi nền tím body */
+    background-color: #ffffff; /* Màu trắng để tách khỏi nền tím body */
 }
 h1 {
     font-size: 1.8em;
@@ -135,7 +135,7 @@ h2 {
 .section-page {
     padding: 0px 0px;
     text-align: center;
-    background-color: #FFF9F9; /* Màu nền nhẹ, có thể thay đổi */
+    background-color: #FFFFFF; /* Màu nền nhẹ, có thể thay đổi */
     min-height: auto;
 }
 .chamngon {
@@ -473,7 +473,7 @@ font-size: 18px;
 .khachmoi {
     border: 1;
     height: 1px;
-    background: #c8d3ff;
+    background: #ffffff;
     margin: 10px auto;
     width: 50%;
 }
@@ -510,7 +510,7 @@ font-size: 18px;
     /* Thêm một chút border và shadow để tạo độ nổi */
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 0; /* Đảm bảo không có padding thừa */
 }
 
@@ -869,7 +869,7 @@ font-size: 18px;
 
 /* --- Thiết lập chung cho Trang Album Ảnh --- */
 .section-page.page-photo-album {
-    background-color: #FFF9F9;
+    background-color: #FFFfff;
     padding: 0px 10px; /* Giảm padding ngang để ảnh sát hơn */
 }
 
